@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EJC Crisis Intelligence Dashboard — Quick Reference Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#1ABCB0;--teal-dark:#0D6B64;--teal-deep:#094E49;--teal-pale:#E0F7F5;--teal-mid:#A8E6E1;
+  --ink:#0B1215;--ink-mid:#1A2A30;--slate:#4A5C64;--fog:#8A9BA3;--warm:#E8EAEA;--off:#F7FAFA;
+  --red:#E05555;--orange:#F28C38;--green:#34C78A;--gold:#F5C842;--white:#FFFFFF;
+  --fd:'DM Serif Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;--fm:'DM Mono','Courier New',monospace;
+}
+
+/* PAGE */
+@media screen {
+  body{font-family:var(--fb);background:var(--off);color:var(--ink-mid);font-size:14px;line-height:1.6;padding:40px}
+  .page{max-width:1080px;margin:0 auto;background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 24px 80px rgba(11,18,21,.12)}
+}
+@media print {
+  body{font-family:var(--fb);background:white;color:#1A2A30;font-size:11px;line-height:1.5;margin:0;padding:0}
+  .page{width:100%;max-width:none;border-radius:0;box-shadow:none}
+  .no-print{display:none}
+}
+
+/* HEADER */
+.doc-header{background:var(--ink);padding:36px 48px;display:flex;justify-content:space-between;align-items:flex-end;position:relative;overflow:hidden}
+.doc-header::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(26,188,176,.12) 0%,transparent 70%);pointer-events:none}
+.doc-header::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--teal),transparent)}
+.header-left{}
+.header-eyebrow{font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.header-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--teal)}
+.header-title{font-family:var(--fd);font-size:28px;color:var(--white);line-height:1.1;margin-bottom:6px}
+.header-title em{color:var(--teal);font-style:italic}
+.header-sub{font-size:13px;color:var(--fog);font-weight:300}
+.header-right{text-align:right;font-family:var(--fm);font-size:10px;color:var(--fog);line-height:1.8;letter-spacing:.04em}
+
+/* BODY */
+.doc-body{padding:40px 48px}
+
+/* INTRO STRIP */
+.intro-strip{background:var(--teal-pale);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:18px 22px;margin-bottom:36px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.intro-item{}
+.intro-label{font-family:var(--fm);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:4px}
+.intro-val{font-size:13px;color:var(--ink-mid);font-weight:500;line-height:1.4}
+
+/* SECTION LABEL */
+.guide-section{margin-bottom:32px}
+.guide-section-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--warm)}
+.guide-section-num{font-family:var(--fd);font-size:22px;color:var(--teal);line-height:1}
+.guide-section-title{font-size:15px;font-weight:600;color:var(--ink);line-height:1.2}
+.guide-section-tag{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(26,188,176,.1);color:var(--teal-dark);border:1px solid rgba(26,188,176,.2);margin-left:auto;white-space:nowrap}
+
+/* TWO-COL LAYOUT */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:8px}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:8px}
+
+/* CONTROL BLOCKS */
+.control-block{background:var(--off);border:1px solid var(--warm);border-radius:8px;padding:16px 18px}
+.control-block.dark{background:var(--ink-mid);border-color:rgba(26,188,176,.15)}
+.control-type{font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.control-type svg{flex-shrink:0}
+.control-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px}
+.control-block.dark .control-name{color:var(--white)}
+.control-desc{font-size:12px;color:var(--slate);line-height:1.5}
+.control-block.dark .control-desc{color:var(--fog)}
+.control-example{margin-top:10px;padding:8px 12px;background:rgba(26,188,176,.08);border-radius:6px;font-family:var(--fm);font-size:11px;color:var(--teal-dark);line-height:1.5;border-left:3px solid var(--teal)}
+.control-block.dark .control-example{background:rgba(26,188,176,.1);color:var(--teal-mid)}
+
+/* SECTION CARDS */
+.section-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:8px}
+.section-card{padding:16px;position:relative;overflow:hidden}
+.section-card:nth-child(1){background:var(--ink);border-radius:8px 0 0 0}
+.section-card:nth-child(2){background:var(--ink-mid)}
+.section-card:nth-child(3){background:var(--ink);border-radius:0 8px 0 0}
+.section-card:nth-child(4){background:var(--ink-mid);border-radius:0 0 0 8px}
+.section-card:nth-child(5){background:var(--ink)}
+.section-card:nth-child(6){background:var(--ink-mid);border-radius:0 0 8px 0}
+.section-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),transparent)}
+.sc-num{font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.sc-name{font-size:13px;font-weight:600;color:var(--white);margin-bottom:5px;line-height:1.3}
+.sc-desc{font-size:11px;color:var(--fog);line-height:1.5;margin-bottom:8px}
+.sc-controls{display:flex;flex-wrap:wrap;gap:4px}
+.sc-control-tag{font-family:var(--fm);font-size:9px;padding:2px 8px;border-radius:20px;border:1px solid}
+.sc-control-tag.search{color:#A8E6E1;border-color:rgba(168,230,225,.3);background:rgba(168,230,225,.08)}
+.sc-control-tag.filter{color:var(--gold);border-color:rgba(245,200,66,.3);background:rgba(245,200,66,.08)}
+.sc-control-tag.sort{color:var(--orange);border-color:rgba(242,140,56,.3);background:rgba(242,140,56,.08)}
+
+/* WORKFLOW TABLE */
+.workflow-table{width:100%;border-collapse:collapse;margin-bottom:8px;font-size:12px}
+.workflow-table th{text-align:left;font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dark);padding:10px 14px;border-bottom:2px solid rgba(26,188,176,.2);background:rgba(26,188,176,.04)}
+.workflow-table td{padding:10px 14px;border-bottom:1px solid var(--warm);vertical-align:top;line-height:1.5}
+.workflow-table tr:last-child td{border-bottom:none}
+.workflow-table tr:hover td{background:rgba(26,188,176,.03)}
+.workflow-table .room{font-weight:600;color:var(--ink);white-space:nowrap}
+.workflow-table .action{color:var(--slate)}
+.workflow-table .result{color:var(--teal-dark);font-family:var(--fm);font-size:11px}
+.workflow-table .nav-badge{display:inline-block;font-family:var(--fm);font-size:9px;padding:1px 7px;border-radius:20px;background:var(--ink-mid);color:var(--teal);border:1px solid rgba(26,188,176,.2)}
+
+/* TIPS GRID */
+.tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px}
+.tip-card{background:var(--off);border:1px solid var(--warm);border-radius:8px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.tip-icon{flex-shrink:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+.tip-icon.green{background:rgba(52,199,138,.12)}
+.tip-icon.orange{background:rgba(242,140,56,.12)}
+.tip-icon.teal{background:rgba(26,188,176,.12)}
+.tip-icon.red{background:rgba(224,85,85,.12)}
+.tip-body{}
+.tip-title{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.tip-desc{font-size:11px;color:var(--slate);line-height:1.5}
+
+/* PILL DEMO */
+.pill-demo{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.demo-pill{font-family:var(--fm);font-size:10px;letter-spacing:.06em;padding:5px 13px;border-radius:20px;border:1px solid}
+.demo-pill.active{background:rgba(26,188,176,.15);border-color:rgba(26,188,176,.5);color:var(--teal-dark)}
+.demo-pill.inactive{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.1);color:var(--slate)}
+
+/* SEARCH DEMO */
+.search-demo{display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.1);border-radius:6px;padding:8px 12px;margin-top:8px}
+.search-demo svg{opacity:.4;flex-shrink:0}
+.search-demo-text{font-family:var(--fm);font-size:11px;color:var(--slate)}
+.search-demo-cursor{display:inline-block;width:1px;height:12px;background:var(--teal);animation:blink 1s infinite;vertical-align:middle;margin-left:1px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* SORT DEMO */
+.sort-demo-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:11px}
+.sort-demo-table th{background:var(--ink-mid);color:var(--teal);font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;text-align:left;cursor:pointer}
+.sort-demo-table td{padding:7px 10px;border-bottom:1px solid var(--warm);color:var(--slate)}
+.sort-demo-table .active-col{color:var(--teal-dark)!important;background:rgba(26,188,176,.05)}
+.sort-indicator{margin-left:4px;font-size:9px;color:var(--teal)}
+
+/* DIVIDER */
+.divider{border:none;border-top:1px solid var(--warm);margin:28px 0}
+
+/* FOOTER */
+.doc-footer{background:var(--ink);padding:20px 48px;display:flex;justify-content:space-between;align-items:center}
+.footer-brand{font-family:var(--fd);font-size:16px;color:var(--teal)}
+.footer-meta{font-family:var(--fm);font-size:9px;color:var(--fog);letter-spacing:.06em;text-align:right;line-height:1.7}
+
+/* PRINT BUTTON */
+.print-btn{position:fixed;bottom:32px;right:32px;background:var(--teal);color:var(--white);border:none;border-radius:8px;padding:12px 20px;font-family:var(--fm);font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(26,188,176,.3);transition:all .2s;z-index:100}
+.print-btn:hover{background:var(--teal-dark);transform:translateY(-2px)}
+@media print{.print-btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="header-left">
+      <div class="header-eyebrow">Quick Reference Guide</div>
+      <div class="header-title">EJC Crisis Intelligence Dashboard<br><em>How to navigate and use every feature</em></div>
+      <div class="header-sub">Six sections · Three control types · One argument · All searchable</div>
+    </div>
+    <div class="header-right">
+      EJC District Lab<br>
+      Build Systems. Promote Justice.<br>
+      Dashboard Version 2 · May 2026
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="doc-body">
+
+    <!-- INTRO STRIP -->
+    <div class="intro-strip">
+      <div class="intro-item">
+        <div class="intro-label">What this dashboard does</div>
+        <div class="intro-val">Puts the full crisis and achievement argument — with sources — at your fingertips. Study it. Use it in the room.</div>
+      </div>
+      <div class="intro-item">
+        <div class="intro-label">How to navigate</div>
+        <div class="intro-val">Fixed top nav bar jumps to any section. Six sections top to bottom. Scroll or click the nav — both work.</div>
+      </div>
+      <div class="intro-item">
+        <div class="intro-label">Where to push it</div>
+        <div class="intro-val">Single HTML file. Paste as index.html in any GitHub repo. Live on GitHub Pages in ~60 seconds. No build needed.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 1: THE SIX SECTIONS -->
+    <div class="guide-section">
+      <div class="guide-section-header">
+        <div class="guide-section-num">01</div>
+        <div class="guide-section-title">The Six Sections — What Each One Contains</div>
+        <span class="guide-section-tag">Navigation Map</span>
+      </div>
+
+      <div class="section-cards">
+        <div class="section-card">
+          <div class="sc-num">Section 1 · #crisis</div>
+          <div class="sc-name">District Budget Headlines</div>
+          <div class="sc-desc">9 districts, all 2026 public record. Each card shows deficit amount, the governance signal, cause tags, and a live link to the source article.</div>
+          <div class="sc-controls">
+            <span class="sc-control-tag search">Search</span>
+            <span class="sc-control-tag filter">5 Filter Pills</span>
+            <span class="sc-control-tag sort">Sort by $</span>
+          </div>
+        </div>
+        <div class="section-card">
+          <div class="sc-num">Section 2 · #scorecard</div>
+          <div class="sc-name">Stanford / Harvard Findings</div>
+          <div class="sc-desc">Six findings from the 2026 Education Scorecard. Each card includes the finding, the body of evidence, and the EJC signal — what it means for the pitch.</div>
+          <div class="sc-controls">
+            <span class="sc-control-tag search">Search</span>
+            <span class="sc-control-tag filter">5 Filter Pills</span>
+          </div>
+        </div>
+        <div class="section-card">
+          <div class="sc-num">Section 3 · #juxtaposition</div>
+          <div class="sc-name">The Synthesis</div>
+          <div class="sc-desc">Two columns. Budget crisis left. Achievement data right. Five matched pairs that show the same root cause visible in two datasets. Closes with the one-sentence argument.</div>
+          <div class="sc-controls">
+            <span class="sc-control-tag search">Search Both</span>
+            <span class="sc-control-tag filter">4 Filter Pills</span>
+          </div>
+        </div>
+        <div class="section-card">
+          <div class="sc-num">Section 4 · #market</div>
+          <div class="sc-name">Market Intelligence</div>
+          <div class="sc-desc">26 data points with full sources. Sortable table by any column. Animated bar charts for visual reference. Every number used in any pitch or application lives here.</div>
+          <div class="sc-controls">
+            <span class="sc-control-tag search">Search</span>
+            <span class="sc-control-tag filter">6 Filter Pills</span>
+            <span class="sc-control-tag sort">Sort Any Column</span>
+          </div>
+        </div>
+        <div class="section-card">
+          <div class="sc-num">Section 5 · #model</div>
+          <div class="sc-name">The Revenue Model</div>
+          <div class="sc-desc">11 revenue streams across 4 tiers. Filter by tier. Sort Year 1, Year 2, Year 3 numerically. Search by stream name. Three-year projection cards below the table.</div>
+          <div class="sc-controls">
+            <span class="sc-control-tag search">Search</span>
+            <span class="sc-control-tag filter">4 Tier Pills</span>
+            <span class="sc-control-tag sort">Sort $ by Year</span>
+          </div>
+        </div>
+        <div class="section-card">
+          <div class="sc-num">Section 6 · #talking</div>
+          <div class="sc-name">Talking Points</div>
+          <div class="sc-desc">24 talking points across 4 rooms: Investor, District, Board, Competition. Search hides non-matching points individually. The room header stays visible if any point matches.</div>
+          <div class="sc-controls">
+            <span class="sc-control-tag search">Search Inside</span>
+            <span class="sc-control-tag filter">4 Room Pills</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 2: THREE CONTROLS -->
+    <div class="guide-section">
+      <div class="guide-section-header">
+        <div class="guide-section-num">02</div>
+        <div class="guide-section-title">The Three Control Types — How Each One Works</div>
+        <span class="guide-section-tag">Controls Reference</span>
+      </div>
+
+      <div class="three-col">
+
+        <!-- SEARCH -->
+        <div class="control-block">
+          <div class="control-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Search Bar
+          </div>
+          <div class="control-name">Type to filter live</div>
+          <div class="control-desc">Start typing and results update instantly. Searches across all text in each item — city, state, note, signal, tags, titles, body text, sources, and EJC signals.</div>
+          <div class="search-demo">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <span class="search-demo-text">governance<span class="search-demo-cursor"></span></span>
+          </div>
+          <div class="control-example">Try: "governance" → surfaces all governance-failure items across crisis cards and juxta. Try "2013" → pulls every item referencing the pre-pandemic recession.</div>
+        </div>
+
+        <!-- FILTER PILLS -->
+        <div class="control-block">
+          <div class="control-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Filter Pills
+          </div>
+          <div class="control-name">Click to narrow by category</div>
+          <div class="control-desc">Each pill filters to a specific tag or theme. Active pill is highlighted teal. "All" resets the filter. Pills and search work together — filter first, then search within results.</div>
+          <div class="pill-demo">
+            <span class="demo-pill active">All Districts</span>
+            <span class="demo-pill inactive">Governance</span>
+            <span class="demo-pill inactive">ESSER Cliff</span>
+            <span class="demo-pill inactive">Federal Risk</span>
+          </div>
+          <div class="control-example">Crisis: 5 cause tags. Scorecard: 5 themes. Synthesis: 4 argument themes. Market: 6 data categories. Revenue: 4 tiers. Talking Points: 4 rooms.</div>
+        </div>
+
+        <!-- SORT -->
+        <div class="control-block">
+          <div class="control-type">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 5h10M11 9h7M11 13h4m1 8-4-4 4-4M3 3l3.586 3.586a2 2 0 0 0 2.828 0L13 3"/></svg>
+            Sort Controls
+          </div>
+          <div class="control-name">Click column headers or use dropdown</div>
+          <div class="control-desc">Market Data table and Revenue table: click any column header. Click again to reverse direction. An arrow appears on the active sort column. Crisis cards have a dropdown for deficit size or alphabetical.</div>
+          <table class="sort-demo-table">
+            <tr>
+              <th>Metric</th>
+              <th>Number <span class="sort-indicator">↓</span></th>
+            </tr>
+            <tr>
+              <td>Philadelphia deficit</td>
+              <td class="active-col" style="font-family:var(--fm);font-size:11px;color:var(--teal-dark)">$300M</td>
+            </tr>
+            <tr>
+              <td>Sacramento projected</td>
+              <td class="active-col" style="font-family:var(--fm);font-size:11px;color:var(--teal-dark)">$124.5M</td>
+            </tr>
+          </table>
+          <div class="control-example">Revenue table: Year 1, 2, 3 columns sort by actual dollar value — so $216K sorts correctly above $36K, not alphabetically.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 3: USE BY ROOM -->
+    <div class="guide-section">
+      <div class="guide-section-header">
+        <div class="guide-section-num">03</div>
+        <div class="guide-section-title">Use by Room — What to Pull Up Before Each Conversation</div>
+        <span class="guide-section-tag">Preparation Workflow</span>
+      </div>
+
+      <table class="workflow-table">
+        <thead>
+          <tr>
+            <th style="width:140px">Room / Context</th>
+            <th style="width:220px">Navigate to</th>
+            <th style="width:200px">Action in Dashboard</th>
+            <th>What you walk in with</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="room">Investor Pitch</td>
+            <td><span class="nav-badge">#crisis</span> then <span class="nav-badge">#scorecard</span> then <span class="nav-badge">#model</span></td>
+            <td class="action">Sort crisis cards by deficit (High→Low). Filter scorecard by "Leadership." Open revenue table, filter Tier 1.</td>
+            <td class="result">The five biggest deficits ranked. The 108 Districts finding. Year 1 presence revenue in front of you.</td>
+          </tr>
+          <tr>
+            <td class="room">Alpha-Bet Application</td>
+            <td><span class="nav-badge">#market</span> then <span class="nav-badge">#juxtaposition</span></td>
+            <td class="action">Filter market table by "Market Size." Search synthesis for "middle." Copy the synthesis statement at the bottom of #juxtaposition.</td>
+            <td class="result">$17B, 6.9%, 13,000 all in one view. The one-sentence argument ready to paste.</td>
+          </tr>
+          <tr>
+            <td class="room">Board Conversation</td>
+            <td><span class="nav-badge">#crisis</span> then <span class="nav-badge">#talking</span></td>
+            <td class="action">Filter crisis cards by "Governance." Filter talking points by "Board Room." Search "visibility framework" in talking points.</td>
+            <td class="result">Every governance-failure case. Every board-specific talking point. The Visibility Framework point isolated.</td>
+          </tr>
+          <tr>
+            <td class="room">District Leader Meeting</td>
+            <td><span class="nav-badge">#scorecard</span> then <span class="nav-badge">#talking</span></td>
+            <td class="action">Filter scorecard by "Leadership." Filter talking points by "District Room." Search "teacher" to surface all teacher-retention points.</td>
+            <td class="result">The 108 Districts finding. The science of reading implementation argument. Retention ROI talking point.</td>
+          </tr>
+          <tr>
+            <td class="room">Competition Question</td>
+            <td><span class="nav-badge">#talking</span></td>
+            <td class="action">Filter talking points by "Competition." All four points appear. Search "Six Sigma" to pull the credential analogy.</td>
+            <td class="result">Four clean responses to the "who else does this" question, including the Six Sigma parallel.</td>
+          </tr>
+          <tr>
+            <td class="room">Rapid Data Pull</td>
+            <td><span class="nav-badge">#market</span></td>
+            <td class="action">Filter by specific category (Achievement, Workforce, Federal Funding). Click column header to sort by value. Search any stat by keyword.</td>
+            <td class="result">Any sourced number in 10 seconds with source attribution. Sort by value to find the biggest or smallest figure in any category.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 4: TIPS -->
+    <div class="guide-section">
+      <div class="guide-section-header">
+        <div class="guide-section-num">04</div>
+        <div class="guide-section-title">Tips, Shortcuts, and Things to Know</div>
+        <span class="guide-section-tag">Pro Notes</span>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon green">🔍</div>
+          <div class="tip-body">
+            <div class="tip-title">Search and filter stack</div>
+            <div class="tip-desc">Search and filter pills work together in every section. Click a filter pill first to narrow the category, then search within those results. Clear either to reset that layer independently.</div>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon teal">↕</div>
+          <div class="tip-body">
+            <div class="tip-title">Click column headers twice to reverse</div>
+            <div class="tip-desc">First click: sort ascending. Second click: sort descending. A ↑ or ↓ arrow appears on the active column. Works in both the Market Data table and the Revenue Model table.</div>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon orange">⟷</div>
+          <div class="tip-body">
+            <div class="tip-title">Synthesis search works across both columns</div>
+            <div class="tip-desc">In the Synthesis section, the search bar queries both the budget crisis column and the achievement data column simultaneously. Both paired items show or hide together — the connection between datasets stays intact.</div>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon teal">→</div>
+          <div class="tip-body">
+            <div class="tip-title">Every source link is live</div>
+            <div class="tip-desc">Every crisis card has a "Read the story" link that opens the original article in a new tab. Every source in the market data table is labeled. The Scorecard section has four direct links to the full report, Harvard coverage, Stanford SEDA, and Stanford press release.</div>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon green">⬆</div>
+          <div class="tip-body">
+            <div class="tip-title">Nav bar anchors are sticky</div>
+            <div class="tip-desc">The top navigation bar stays fixed as you scroll. Click any section name to jump directly. The active section highlights in teal as you scroll through. On mobile the nav links hide — scroll or use browser navigation.</div>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon orange">📊</div>
+          <div class="tip-body">
+            <div class="tip-title">Bar charts animate on scroll</div>
+            <div class="tip-desc">In the Market Data section, the bar charts animate their fill when they enter the viewport. If you want to trigger the animation again, scroll away and back. Red bars = crisis indicators. Teal bars = EJC opportunity indicators. Green bars = positive trends.</div>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon red">✕</div>
+          <div class="tip-body">
+            <div class="tip-title">Clear search: just delete the text</div>
+            <div class="tip-desc">There is no separate reset button. Delete your search text and all results return. Click "All" in the filter pills to reset the category filter. Both together = full data view restored.</div>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon teal">⊞</div>
+          <div class="tip-body">
+            <div class="tip-title">Result count always shows</div>
+            <div class="tip-desc">Every section with controls shows a result count line just above the data — "Showing X of Y items." This tells you how many results match your current filter and search combination at all times.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECTION 5: DEPLOY -->
+    <div class="guide-section">
+      <div class="guide-section-header">
+        <div class="guide-section-num">05</div>
+        <div class="guide-section-title">Pushing to GitHub Pages — Three Steps</div>
+        <span class="guide-section-tag">Deployment</span>
+      </div>
+
+      <div class="three-col">
+        <div class="control-block dark">
+          <div class="control-type">Step 01</div>
+          <div class="control-name">Create the repo</div>
+          <div class="control-desc">Go to github.com → New repository. Name it <code style="background:rgba(26,188,176,.15);padding:2px 6px;border-radius:4px;font-family:var(--fm);font-size:11px;color:var(--teal)">ejc-crisis-dashboard</code>. Leave it public. Don't add a README.</div>
+          <div class="control-example">Or add to the existing ej25-lab org. The repo name becomes part of the URL.</div>
+        </div>
+        <div class="control-block dark">
+          <div class="control-type">Step 02</div>
+          <div class="control-name">Add the file</div>
+          <div class="control-desc">Click "creating a new file." Name it exactly <code style="background:rgba(26,188,176,.15);padding:2px 6px;border-radius:4px;font-family:var(--fm);font-size:11px;color:var(--teal)">index.html</code>. Paste the full contents of EJC_CrisisDashboard_v2.html. Commit to main.</div>
+          <div class="control-example">Select all in the file → Ctrl+A / Cmd+A → paste. The file is ~73KB. Commit message: "Add crisis intelligence dashboard v2"</div>
+        </div>
+        <div class="control-block dark">
+          <div class="control-type">Step 03</div>
+          <div class="control-name">Enable Pages</div>
+          <div class="control-desc">Repo Settings → Pages → Source: "Deploy from a branch" → Branch: main → folder: / (root) → Save. Live in ~60 seconds at the URL GitHub shows you.</div>
+          <div class="control-example">Live URL format: https://ej25-lab.github.io/ejc-crisis-dashboard/ — Share this link. Single file. No maintenance. No dependencies.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /doc-body -->
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <div>
+      <div class="footer-brand">EJC District Lab</div>
+      <div style="font-family:var(--fm);font-size:9px;color:var(--fog);letter-spacing:.06em;margin-top:4px">Build Systems. Promote Justice.</div>
+    </div>
+    <div class="footer-meta">
+      Crisis Intelligence Dashboard · Quick Reference Guide<br>
+      Tyra L. Harrison · chief@tieredjusticenow.com · May 2026
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<button class="print-btn no-print" onclick="window.print()">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+  Print / Save PDF
+</button>
+
+</body>
+</html>
