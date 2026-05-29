@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The financial crisis and the achievement crisis are the same crisis. EJC District Lab — Crisis Intelligence Dashboard. Founding Class enrollment opens Fall 2026.">
+<meta property="og:title" content="The financial crisis and the achievement crisis are the same crisis.">
+<meta property="og:description" content="EJC District Lab — Crisis Intelligence Dashboard. Crisis data, Stanford/Harvard findings, market intelligence, and the 10-stream revenue model. Founding Class · Fall 2026.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EJC District Lab">
 <title>EJC District Lab — Crisis Intelligence Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +16,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
-  --teal:#1ABCB0;--teal-dark:#0D6B64;--teal-deep:#094E49;--teal-pale:#E0F7F5;--teal-mid:#A8E6E1;
+  --teal:#00989a;--teal-dark:#007378;--teal-deep:#094E49;--teal-pale:#E0F7F5;--teal-mid:#A8E6E1;
   --ink:#0B1215;--ink-mid:#1A2A30;--slate:#4A5C64;--fog:#8A9BA3;--warm:#E8EAEA;--off:#F5F9F9;--white:#FFFFFF;
   --orange:#F28C38;--orange-pal:#FEF3E8;--red:#E05555;--red-pal:#FEF0F0;--green:#34C78A;--green-pal:#E8F9F0;--gold:#F5C842;
   --fd:'DM Serif Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;--fm:'DM Mono','Courier New',monospace;
@@ -20,7 +25,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--fb);background:var(--ink);color:var(--white);font-size:16px;line-height:1.6;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(11,18,21,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(26,188,176,0.15)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(11,18,21,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,152,154,0.15)}
 .nav-brand{font-family:var(--fd);font-size:18px;color:var(--teal)}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{text-decoration:none;color:var(--fog);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
@@ -28,15 +33,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 80px 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(26,188,176,.1) 0%,transparent 70%);pointer-events:none}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(0,152,154,.1) 0%,transparent 70%);pointer-events:none}
 .eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:24px;display:flex;align-items:center;gap:12px}
 .eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--teal)}
 .hero-title{font-family:var(--fd);font-size:clamp(42px,6vw,78px);line-height:1.05;color:var(--white);max-width:900px;margin-bottom:32px}
 .hero-title em{font-style:italic;color:var(--teal)}
 .hero-sub{font-size:17px;color:var(--fog);max-width:620px;line-height:1.7;margin-bottom:48px;font-weight:300}
 .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:960px}
-.hero-stat{background:rgba(26,188,176,.06);border:1px solid rgba(26,188,176,.12);padding:24px 20px;transition:all .3s;cursor:default}
-.hero-stat:hover{background:rgba(26,188,176,.12);border-color:rgba(26,188,176,.35);transform:translateY(-2px)}
+.hero-stat{background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.12);padding:24px 20px;transition:all .3s;cursor:default}
+.hero-stat:hover{background:rgba(0,152,154,.12);border-color:rgba(0,152,154,.35);transform:translateY(-2px)}
 .hero-stat-num{font-family:var(--fd);font-size:36px;color:var(--teal);line-height:1;margin-bottom:8px}
 .hero-stat-label{font-size:12px;color:var(--fog);line-height:1.4}
 
@@ -56,17 +61,17 @@ section.light .section-title{color:var(--ink)}
 .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.5;pointer-events:none}
 .search-input{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rsm);padding:10px 14px 10px 40px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none;transition:all .2s}
 .search-input::placeholder{color:var(--fog)}
-.search-input:focus{border-color:rgba(26,188,176,.5);background:rgba(26,188,176,.05)}
+.search-input:focus{border-color:rgba(0,152,154,.5);background:rgba(0,152,154,.05)}
 section.light .search-input{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.1);color:var(--ink-mid)}
 section.light .search-input::placeholder{color:var(--slate)}
-section.light .search-input:focus{border-color:rgba(26,188,176,.5);background:rgba(26,188,176,.06)}
+section.light .search-input:focus{border-color:rgba(0,152,154,.5);background:rgba(0,152,154,.06)}
 
 .filter-pills{display:flex;gap:6px;flex-wrap:wrap}
 .pill{font-family:var(--fm);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:40px;color:var(--fog);cursor:pointer;transition:all .2s;white-space:nowrap}
-.pill:hover{background:rgba(26,188,176,.1);border-color:rgba(26,188,176,.3);color:var(--teal)}
-.pill.active{background:rgba(26,188,176,.15);border-color:rgba(26,188,176,.5);color:var(--teal)}
+.pill:hover{background:rgba(0,152,154,.1);border-color:rgba(0,152,154,.3);color:var(--teal)}
+.pill.active{background:rgba(0,152,154,.15);border-color:rgba(0,152,154,.5);color:var(--teal)}
 section.light .pill{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.08);color:var(--slate)}
-section.light .pill:hover,section.light .pill.active{background:rgba(26,188,176,.1);border-color:rgba(26,188,176,.4);color:var(--teal-dark)}
+section.light .pill:hover,section.light .pill.active{background:rgba(0,152,154,.1);border-color:rgba(0,152,154,.4);color:var(--teal-dark)}
 
 .sort-wrap{display:flex;align-items:center;gap:8px}
 .sort-label{font-family:var(--fm);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--fog)}
@@ -105,20 +110,20 @@ section.light .sort-select{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.1
 .data-controls{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
 .stats-table-wrap{overflow-x:auto;border-radius:var(--rmd);border:1px solid rgba(0,0,0,.08)}
 .stats-table{width:100%;border-collapse:collapse;min-width:600px}
-.stats-table th{text-align:left;font-family:var(--fm);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-dark);padding:14px 16px;border-bottom:1px solid rgba(13,107,100,.2);background:rgba(26,188,176,.04);cursor:pointer;white-space:nowrap;user-select:none;transition:background .2s}
-.stats-table th:hover{background:rgba(26,188,176,.1)}
+.stats-table th{text-align:left;font-family:var(--fm);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-dark);padding:14px 16px;border-bottom:1px solid rgba(13,107,100,.2);background:rgba(0,152,154,.04);cursor:pointer;white-space:nowrap;user-select:none;transition:background .2s}
+.stats-table th:hover{background:rgba(0,152,154,.1)}
 .stats-table th .sort-icon{margin-left:6px;opacity:.4;font-size:10px}
 .stats-table th.sorted-asc .sort-icon::after{content:'↑';opacity:1;color:var(--teal-dark)}
 .stats-table th.sorted-desc .sort-icon::after{content:'↓';opacity:1;color:var(--teal-dark)}
 .stats-table th:not(.sorted-asc):not(.sorted-desc) .sort-icon::after{content:'↕'}
 .stats-table td{padding:13px 16px;font-size:13px;border-bottom:1px solid rgba(0,0,0,.05);vertical-align:top;line-height:1.5;color:var(--ink-mid)}
 .stats-table tr:last-child td{border-bottom:none}
-.stats-table tr:hover td{background:rgba(26,188,176,.04)}
+.stats-table tr:hover td{background:rgba(0,152,154,.04)}
 .stats-table tr[data-hidden]{display:none}
 .stats-table .val{font-family:var(--fm);font-size:13px;font-weight:500;color:var(--teal-dark);white-space:nowrap}
 .stats-table .src{font-size:11px;color:rgba(74,92,100,.6);font-style:italic}
 .stats-table .cat-badge{display:inline-flex;align-items:center;font-family:var(--fm);font-size:9px;padding:2px 8px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.cat-market{background:rgba(26,188,176,.1);color:var(--teal-dark);border:1px solid rgba(26,188,176,.2)}
+.cat-market{background:rgba(0,152,154,.1);color:var(--teal-dark);border:1px solid rgba(0,152,154,.2)}
 .cat-achievement{background:rgba(224,85,85,.1);color:#c03535;border:1px solid rgba(224,85,85,.2)}
 .cat-workforce{background:rgba(242,140,56,.1);color:#b5621a;border:1px solid rgba(242,140,56,.2)}
 .cat-financial{background:rgba(245,200,66,.1);color:#a08820;border:1px solid rgba(245,200,66,.2)}
@@ -127,21 +132,21 @@ section.light .sort-select{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.1
 
 /* SCORECARD FINDINGS */
 .findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:40px}
-.finding-card{background:var(--ink-mid);border:1px solid rgba(26,188,176,.1);padding:30px 26px;position:relative;transition:all .3s;cursor:default}
+.finding-card{background:var(--ink-mid);border:1px solid rgba(0,152,154,.1);padding:30px 26px;position:relative;transition:all .3s;cursor:default}
 .finding-card[data-hidden]{display:none}
-.finding-card:hover{border-color:rgba(26,188,176,.4);background:rgba(26,188,176,.04);transform:translateY(-3px);box-shadow:0 16px 48px rgba(11,18,21,.2)}
-.finding-num{font-family:var(--fd);font-size:52px;color:rgba(26,188,176,.12);line-height:1;margin-bottom:14px}
+.finding-card:hover{border-color:rgba(0,152,154,.4);background:rgba(0,152,154,.04);transform:translateY(-3px);box-shadow:0 16px 48px rgba(11,18,21,.2)}
+.finding-num{font-family:var(--fd);font-size:52px;color:rgba(0,152,154,.12);line-height:1;margin-bottom:14px}
 .finding-title{font-weight:600;font-size:14px;color:var(--teal);margin-bottom:10px;line-height:1.3}
 .finding-body{font-size:13px;color:var(--fog);line-height:1.65}
-.finding-ejc{margin-top:14px;padding:12px 14px;background:rgba(26,188,176,.07);border-left:3px solid var(--teal);border-radius:0 var(--rsm) var(--rsm) 0;font-size:12px;color:var(--teal-mid);line-height:1.5;font-style:italic}
+.finding-ejc{margin-top:14px;padding:12px 14px;background:rgba(0,152,154,.07);border-left:3px solid var(--teal);border-radius:0 var(--rsm) var(--rsm) 0;font-size:12px;color:var(--teal-mid);line-height:1.5;font-style:italic}
 .finding-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
-.finding-tag{font-family:var(--fm);font-size:9px;padding:2px 8px;border-radius:20px;background:rgba(26,188,176,.08);color:var(--teal);border:1px solid rgba(26,188,176,.2)}
+.finding-tag{font-family:var(--fm);font-size:9px;padding:2px 8px;border-radius:20px;background:rgba(0,152,154,.08);color:var(--teal);border:1px solid rgba(0,152,154,.2)}
 
 /* JUXTAPOSITION */
 .juxta-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px}
 .juxta-col{padding:36px;position:relative}
 .juxta-col.crisis{background:linear-gradient(135deg,#1a0505 0%,#2a1010 100%);border:1px solid rgba(224,85,85,.2);border-radius:var(--rmd) 0 0 var(--rmd)}
-.juxta-col.scores{background:linear-gradient(135deg,#051a18 0%,#0a2a27 100%);border:1px solid rgba(26,188,176,.2);border-radius:0 var(--rmd) var(--rmd) 0}
+.juxta-col.scores{background:linear-gradient(135deg,#051a18 0%,#0a2a27 100%);border:1px solid rgba(0,152,154,.2);border-radius:0 var(--rmd) var(--rmd) 0}
 .juxta-col-label{font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
 .juxta-col.crisis .juxta-col-label{color:var(--red)}
 .juxta-col.scores .juxta-col-label{color:var(--teal)}
@@ -152,16 +157,16 @@ section.light .sort-select{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.1
 .juxta-detail{font-size:13px;color:var(--fog);line-height:1.5;margin-bottom:6px}
 .juxta-tag{display:inline-flex;align-items:center;font-family:var(--fm);font-size:10px;padding:3px 10px;border-radius:20px;margin-top:2px}
 .juxta-tag.red{background:rgba(224,85,85,.12);color:var(--red)}
-.juxta-tag.teal{background:rgba(26,188,176,.12);color:var(--teal)}
+.juxta-tag.teal{background:rgba(0,152,154,.12);color:var(--teal)}
 
-.synthesis{background:var(--teal-deep);border:1px solid rgba(26,188,176,.25);border-radius:var(--rlg);padding:44px;position:relative;overflow:hidden}
-.synthesis::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(26,188,176,.12) 0%,transparent 70%)}
+.synthesis{background:var(--teal-deep);border:1px solid rgba(0,152,154,.25);border-radius:var(--rlg);padding:44px;position:relative;overflow:hidden}
+.synthesis::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(0,152,154,.12) 0%,transparent 70%)}
 .synthesis-title{font-family:var(--fd);font-size:26px;color:var(--teal);margin-bottom:14px;font-style:italic}
 .synthesis-body{font-size:17px;line-height:1.8;color:rgba(255,255,255,.85);max-width:800px;font-weight:300}
 .synthesis-body strong{color:var(--white);font-weight:600}
 
 /* QUOTE */
-.quote-block{border-left:4px solid var(--teal);padding:28px 36px;background:rgba(26,188,176,.04);border-radius:0 var(--rmd) var(--rmd) 0;margin:40px 0}
+.quote-block{border-left:4px solid var(--teal);padding:28px 36px;background:rgba(0,152,154,.04);border-radius:0 var(--rmd) var(--rmd) 0;margin:40px 0}
 .quote-text{font-family:var(--fd);font-size:22px;font-style:italic;color:var(--white);line-height:1.5;margin-bottom:14px}
 .quote-attr{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
 
@@ -169,7 +174,7 @@ section.light .sort-select{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.1
 .rev-table{width:100%;border-collapse:collapse;margin-top:28px}
 .rev-table th{background:var(--ink);color:var(--teal);font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:14px 18px;text-align:left;cursor:pointer;user-select:none}
 .rev-table th:not(:first-child){text-align:center}
-.rev-table th:hover{background:rgba(26,188,176,.08)}
+.rev-table th:hover{background:rgba(0,152,154,.08)}
 .rev-table td{padding:13px 18px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.04)}
 .rev-table td:not(:first-child){text-align:center;font-family:var(--fm);font-size:13px;color:var(--teal)}
 .rev-table td:first-child{color:var(--fog)}
@@ -180,7 +185,7 @@ section.light .sort-select{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.1
 
 /* TALKING POINTS */
 .tp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
-.tp-card{background:var(--ink-mid);border:1px solid rgba(26,188,176,.1);padding:30px 26px}
+.tp-card{background:var(--ink-mid);border:1px solid rgba(0,152,154,.1);padding:30px 26px}
 .tp-card[data-hidden]{display:none}
 .tp-room{font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;display:flex;align-items:center;gap:8px}
 .tp-room::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
@@ -200,7 +205,7 @@ section.light .sort-select{background:rgba(0,0,0,.04);border-color:rgba(0,0,0,.1
 .bar-val{font-family:var(--fm);font-size:13px;font-weight:500;color:var(--teal-dark)}
 
 /* FOOTER */
-footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:44px 80px;display:flex;justify-content:space-between;align-items:center}
+footer{background:var(--ink);border-top:1px solid rgba(0,152,154,.12);padding:44px 80px;display:flex;justify-content:space-between;align-items:center}
 .footer-brand{font-family:var(--fd);font-size:22px;color:var(--teal)}
 .footer-tagline{font-size:13px;color:var(--fog);margin-top:4px}
 .footer-info{text-align:right;font-family:var(--fm);font-size:11px;color:var(--fog);line-height:1.8;letter-spacing:.04em}
@@ -236,28 +241,35 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
 <nav>
   <div class="nav-brand">EJC District Lab</div>
   <ul class="nav-links">
-    <li><a href="#crisis">Budget Crisis</a></li>
-    <li><a href="#scorecard">Student Outcomes</a></li>
-    <li><a href="#juxtaposition">The Connection</a></li>
-    <li><a href="#market">The Data</a></li>
-    <li><a href="#model">The Solution</a></li>
-    <li><a href="#talking">Key Messages</a></li>
+    <li><a href="#crisis">Crisis Data</a></li>
+    <li><a href="#scorecard">Scorecard</a></li>
+    <li><a href="#juxtaposition">Synthesis</a></li>
+    <li><a href="#market">Market Data</a></li>
+    <li><a href="#model">The Model</a></li>
+    <li><a href="#founding">Founding Class</a></li>
+    <li><a href="#talking">Talking Points</a></li>
+    <li><a href="#team">Team</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="eyebrow"><span class="pulse"></span>Public Education · United States · May 2026</div>
+  <div class="eyebrow"><span class="pulse" aria-label="Live indicator" role="img"></span>Crisis Intelligence Dashboard · May 2026</div>
   <h1 class="hero-title">The financial crisis and the<br>achievement crisis are<br><em>the same crisis.</em></h1>
-  <p class="hero-sub">School districts across the country are running out of money while students fall further behind. A 2026 study by Harvard and Stanford confirmed both crises share the same root cause — and the same solution.</p>
+  <p class="hero-sub">District budgets are collapsing. Student scores have been falling since 2013. Harvard and Stanford just confirmed what practitioners have known for a decade — leadership infrastructure is the missing variable in both equations.</p>
   <div class="hero-stats" id="heroStats"></div>
+
+  <div style="margin-top:48px;display:flex;flex-wrap:wrap;gap:18px;align-items:center">
+    <a href="mailto:chief@tieredjusticenow.com?subject=EJC%20District%20Lab%20Walkthrough%20Request" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:var(--white);text-decoration:none;padding:14px 28px;border-radius:var(--rsm);font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;border:1px solid rgba(0,152,154,.4)">Book a 30-min walkthrough →</a>
+    <a href="#founding" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);color:var(--teal);text-decoration:none;padding:14px 28px;border-radius:var(--rsm);font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(0,152,154,.3);transition:all .2s">Founding Class · Fall 2026 →</a>
+  </div>
 </div>
 
 <!-- CRISIS DATA -->
 <section id="crisis">
-  <div class="section-label">District Budget Deficits · 2026 · Public Record</div>
-  <h2 class="section-title">School districts across the country<br>are running out of money.</h2>
-  <p class="section-sub">These are real districts, real dollar amounts, and real consequences — all from 2026 public reporting. In nearly every case, the school board was the last to know.</p>
+  <div class="section-label">District Budget Headlines · 2026 · Searchable + Filterable</div>
+  <h2 class="section-title">Search "school district financial crisis 2026."<br>Count the headlines.</h2>
+  <p class="section-sub">In nearly every case the board was the last to know. Sort by deficit size. Filter by cause. Search by city or state.</p>
 
   <div class="control-bar">
     <div class="search-wrap">
@@ -283,15 +295,15 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
   </div>
   <div class="result-count" id="crisisCount"></div>
   <div class="crisis-grid" id="crisisGrid">
-    <div class="no-results" id="crisisNoResults">No districts match your search. Try clearing filters.</div>
+    <div class="no-results" id="crisisNoResults" role="status" aria-label="No districts match your search">No districts match your search. Try clearing filters.</div>
   </div>
 </section>
 
 <!-- SCORECARD FINDINGS -->
 <section id="scorecard" class="mid">
-  <div class="section-label">Stanford + Harvard · Education Scorecard · May 2026</div>
-  <h2 class="section-title" style="color:var(--white)">Student achievement has been falling<br>since 2013 — not 2020.</h2>
-  <p class="section-sub">A joint study by Harvard and Stanford analyzed test results for 35 million students and found the decline started seven years before COVID. These are the six key findings.</p>
+  <div class="section-label">Stanford SEDA + Harvard CEPR · Education Scorecard · May 2026</div>
+  <h2 class="section-title" style="color:var(--white)">The learning recession began in 2013.<br>Seven years before COVID.</h2>
+  <p class="section-sub">Six findings from the 2026 Education Scorecard — 35 million students, grades 3–8, 2022–2025. Search and filter by theme.</p>
 
   <div class="quote-block reveal">
     <div class="quote-text">"The pandemic was the mudslide that followed seven years of erosion in student achievement."</div>
@@ -321,18 +333,18 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
   </div>
 
   <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
-    <a href="https://educationscorecard.org/wp-content/uploads/2026/05/Education_Scorecard_May_2026_Report.pdf" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(26,188,176,.12);border:1px solid rgba(26,188,176,.3);color:var(--teal);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Full Report PDF →</a>
-    <a href="https://www.gse.harvard.edu/ideas/news/26/05/new-education-scorecard-finds-u-shaped-recovery" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(26,188,176,.06);border:1px solid rgba(26,188,176,.15);color:var(--fog);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Harvard Coverage →</a>
-    <a href="https://edopportunity.org/trends/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(26,188,176,.06);border:1px solid rgba(26,188,176,.15);color:var(--fog);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Stanford SEDA Explorer →</a>
-    <a href="https://siepr.stanford.edu/news/us-learning-student-achievement-falling-long-before-pandemic-study-finds" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(26,188,176,.06);border:1px solid rgba(26,188,176,.15);color:var(--fog);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Stanford Press Release →</a>
+    <a href="https://educationscorecard.org/wp-content/uploads/2026/05/Education_Scorecard_May_2026_Report.pdf" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,152,154,.12);border:1px solid rgba(0,152,154,.3);color:var(--teal);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Full Report PDF →</a>
+    <a href="https://www.gse.harvard.edu/ideas/news/26/05/new-education-scorecard-finds-u-shaped-recovery" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.15);color:var(--fog);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Harvard Coverage →</a>
+    <a href="https://edopportunity.org/trends/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.15);color:var(--fog);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Stanford SEDA Explorer →</a>
+    <a href="https://siepr.stanford.edu/news/us-learning-student-achievement-falling-long-before-pandemic-study-finds" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.15);color:var(--fog);text-decoration:none;padding:11px 18px;border-radius:var(--rsm);font-family:var(--fm);font-size:11px;letter-spacing:.08em;transition:all .2s">Stanford Press Release →</a>
   </div>
 </section>
 
 <!-- JUXTAPOSITION -->
 <section id="juxtaposition">
-  <div class="section-label">The Connection · Budget Crisis + Student Outcomes</div>
+  <div class="section-label">The Synthesis · Two Datasets · One Argument</div>
   <h2 class="section-title">The same districts losing money<br>are the same districts falling behind.</h2>
-  <p class="section-sub">This is not a coincidence. The budget headlines and the academic data tell the same story about the same places.</p>
+  <p class="section-sub">Filter by theme to see how the budget crisis and achievement data speak to each other across every dimension.</p>
 
   <div class="control-bar">
     <div class="search-wrap">
@@ -342,34 +354,34 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
     <div class="filter-pills" id="juxtaFilters">
       <button class="pill active" data-filter="all">All</button>
       <button class="pill" data-filter="middle">Middle-Income Districts</button>
-      <button class="pill" data-filter="governance">Board Oversight</button>
-      <button class="pill" data-filter="infrastructure">Systems Gap</button>
-      <button class="pill" data-filter="recovery">Recovery</button>
+      <button class="pill" data-filter="governance">Governance Failure</button>
+      <button class="pill" data-filter="infrastructure">Infrastructure Gap</button>
+      <button class="pill" data-filter="recovery">Recovery Path</button>
     </div>
   </div>
 
   <div class="juxta-grid" id="juxtaGrid">
     <div class="juxta-col crisis">
-      <div class="juxta-col-label">◆ Budget Headlines</div>
+      <div class="juxta-col-label">◆ The Budget Headlines Say</div>
       <div id="juxtaLeft"></div>
     </div>
     <div class="juxta-col scores">
-      <div class="juxta-col-label">◆ Student Outcome Data</div>
+      <div class="juxta-col-label">◆ The Stanford / Harvard Data Says</div>
       <div id="juxtaRight"></div>
     </div>
   </div>
 
   <div class="synthesis reveal" style="margin-top:3px">
-    <div class="synthesis-title">What the data shows</div>
-    <div class="synthesis-body"><strong>A school board that cannot see its own financial picture cannot build the leadership systems that help students recover.</strong> Without those systems, even the most evidence-based reforms fail to reach students. The money crisis and the learning crisis are not separate problems. They are the same failure — showing up in two different sets of numbers. The solution requires the same fix: leaders who know how to build and run the systems that protect both students and public resources.</div>
+    <div class="synthesis-title">The Argument in One Sentence</div>
+    <div class="synthesis-body"><strong>The boards that cannot read their financial picture cannot build the leadership infrastructure that drives student recovery.</strong> The district executive teams without operating systems cannot implement the reforms that Harvard and Stanford show are working. The financial crisis and the achievement crisis are not two problems. They are one systems failure — visible in two datasets — with one solution. EJC District Lab builds the operating systems that make both outcomes possible. The Governance Lab builds the board literacy that makes the first one survivable.</div>
   </div>
 </section>
 
 <!-- MARKET DATA -->
 <section id="market" class="light">
-  <div class="section-label">The Numbers · All Figures Sourced and Verified</div>
-  <h2 class="section-title">Every number on this page<br>has a source.</h2>
-  <p class="section-sub">This is the data behind the crisis — market size, student outcomes, teacher turnover, district finances, and federal funding. All figures are sourced from federal agencies, peer-reviewed research, or public reporting.</p>
+  <div class="section-label">Market Intelligence · All Numbers Verified · Sortable + Searchable</div>
+  <h2 class="section-title">The market is documented.<br>The gap is specific.</h2>
+  <p class="section-sub">Every number below is sourced. Click any column header to sort. Filter by category. Search any metric.</p>
 
   <div class="data-controls">
     <div class="search-wrap">
@@ -378,11 +390,8 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
     </div>
     <div class="filter-pills" id="statsFilters">
       <button class="pill active" data-filter="all">All Data</button>
-      <button class="pill" data-filter="market">Market Size</button>
-      <button class="pill" data-filter="achievement">Achievement</button>
-      <button class="pill" data-filter="workforce">Workforce</button>
+      <button class="pill" data-filter="market">Market</button>
       <button class="pill" data-filter="financial">Financial Crisis</button>
-      <button class="pill" data-filter="federal">Federal Funding</button>
       <button class="pill" data-filter="scorecard">Scorecard 2026</button>
     </div>
   </div>
@@ -403,14 +412,14 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
   </div>
 
   <div style="margin-top:56px" class="reveal">
-    <h3 style="font-family:var(--fd);font-size:22px;color:var(--ink);margin-bottom:28px">At a Glance</h3>
+    <h3 style="font-family:var(--fd);font-size:22px;color:var(--ink);margin-bottom:28px">Visual Reference — Animated on Scroll</h3>
     <div class="charts-grid">
       <div>
-        <div style="font-family:var(--fd);font-size:17px;color:var(--ink);margin-bottom:18px">The Market</div>
+        <div style="font-family:var(--fd);font-size:17px;color:var(--ink);margin-bottom:18px">Crisis Scale · Verified District Deficits</div>
         <div class="bar-chart" id="marketBars"></div>
       </div>
       <div>
-        <div style="font-family:var(--fd);font-size:17px;color:var(--ink);margin-bottom:18px">Student Outcomes</div>
+        <div style="font-family:var(--fd);font-size:17px;color:var(--ink);margin-bottom:18px">Scorecard 2026 — Verified Highlights</div>
         <div class="bar-chart" id="achievementBars"></div>
       </div>
     </div>
@@ -419,9 +428,9 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
 
 <!-- THE MODEL -->
 <section id="model">
-  <div class="section-label">EJC District Lab · The Response</div>
-  <h2 class="section-title">There is a documented gap.<br>EJC District Lab fills it.</h2>
-  <p class="section-sub">The first residential program for K–12 district executive teams. Leaders arrive together, build their operating systems, and leave with something that works — not notes from a conference.</p>
+  <div class="section-label">The EJC District Lab Revenue Model · Sortable</div>
+  <h2 class="section-title">10 revenue streams. 4 tiers.<br>Revenue every week of the year.</h2>
+  <p class="section-sub">Stream-by-stream math. Not a top-down projection. Sort any column to explore the model.</p>
 
   <div class="control-bar">
     <div class="search-wrap">
@@ -438,7 +447,7 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
   </div>
   <div class="result-count" id="revCount"></div>
 
-  <div style="overflow-x:auto;border-radius:var(--rmd);border:1px solid rgba(26,188,176,.1)">
+  <div style="overflow-x:auto;border-radius:var(--rmd);border:1px solid rgba(0,152,154,.1)">
     <table class="rev-table" id="revTable">
       <thead>
         <tr>
@@ -454,29 +463,107 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
   </div>
 
   <div style="margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px" class="reveal">
-    <div style="background:rgba(26,188,176,.06);border:1px solid rgba(26,188,176,.15);border-radius:var(--rmd) 0 0 var(--rmd);padding:30px">
+    <div style="background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.15);border-radius:var(--rmd) 0 0 var(--rmd);padding:30px">
       <div style="font-family:var(--fd);font-size:44px;color:var(--teal);margin-bottom:8px">Year 1</div>
       <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$640K–$1.25M</div>
-      <div style="font-size:13px;color:var(--fog);line-height:1.6">Rotating venues · Founding Class · 2 cohorts + intensives · Governance Lab · CSA accreditation</div>
+      <div style="font-size:13px;color:var(--fog);line-height:1.6">Rotating venues · Founding Class · 2 cohorts + intensives · Governance Lab</div>
     </div>
-    <div style="background:rgba(26,188,176,.08);border:1px solid rgba(26,188,176,.2);padding:30px">
+    <div style="background:rgba(0,152,154,.08);border:1px solid rgba(0,152,154,.2);padding:30px">
       <div style="font-family:var(--fd);font-size:44px;color:var(--teal);margin-bottom:8px">Year 2</div>
-      <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$1.39M–$2.63M</div>
+      <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$1.38M–$2.60M</div>
       <div style="font-size:13px;color:var(--fog);line-height:1.6">Pilot venue · 3 cohorts · 5 licensed partners · Annual convening launched · Governance Lab at scale</div>
     </div>
-    <div style="background:rgba(26,188,176,.12);border:1px solid rgba(26,188,176,.3);border-radius:0 var(--rmd) var(--rmd) 0;padding:30px">
+    <div style="background:rgba(0,152,154,.12);border:1px solid rgba(0,152,154,.3);border-radius:0 var(--rmd) var(--rmd) 0;padding:30px">
       <div style="font-family:var(--fd);font-size:44px;color:var(--teal);margin-bottom:8px">Year 3</div>
-      <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$2.32M–$4.29M</div>
-      <div style="font-size:13px;color:var(--fog);line-height:1.6">Permanent campus · 4 cohorts · 10+ licensed partners · Campus rental · CSA nationally recognized</div>
+      <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$2.28M–$4.22M</div>
+      <div style="font-size:13px;color:var(--fog);line-height:1.6">Permanent campus · 4 cohorts · 10+ licensed partners · Campus rental · Independent credentialing path</div>
     </div>
+  </div>
+</section>
+
+<!-- FOUNDING CLASS -->
+<section id="founding">
+  <div class="section-label">Founding Class · Fall 2026 · Interest Form</div>
+  <h2 class="section-title">Add your board to the<br><em>interest list.</em></h2>
+  <p class="section-sub">The Founding Class opens Fall 2026. Tell us what your board needs most. The Chief reads every one — and replies within 48 hours.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:48px">
+    <div class="reveal" style="background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.2);padding:34px 30px;border-radius:var(--rmd) 0 0 var(--rmd)">
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">The Reach Score™</div>
+      <div style="font-family:var(--fd);font-size:22px;line-height:1.4;color:var(--white)">Tells you whether your resources are deployed where students actually need them. Right now. Before the next budget cycle.</div>
+    </div>
+    <div class="reveal" style="background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.2);padding:34px 30px;border-radius:0 var(--rmd) var(--rmd) 0">
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">The Visibility Framework</div>
+      <div style="font-family:var(--fd);font-size:22px;line-height:1.4;color:var(--white)">Five specific data points. If any board anywhere had been tracking them, they would have surfaced the crisis before the headline.</div>
+    </div>
+  </div>
+
+  <div class="reveal" style="background:rgba(0,0,0,.3);border:1px solid rgba(0,152,154,.2);border-radius:var(--rlg);padding:48px 44px;max-width:760px;margin:0 auto">
+    <div style="font-family:var(--fm);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:8px">Tell us what your board needs</div>
+    <h3 style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:28px;line-height:1.25">Three minutes. No login. The Chief reads every one.</h3>
+
+    <div id="ffSuccess" style="display:none;padding:32px;background:rgba(52,199,138,.1);border:1px solid rgba(52,199,138,.3);border-radius:var(--rmd);color:var(--white);text-align:center">
+      <div style="font-family:var(--fd);font-size:26px;color:var(--green);margin-bottom:10px">Thanks.</div>
+      <div style="font-size:15px;color:rgba(255,255,255,.85);line-height:1.6">The Chief will be in touch within 48 hours.</div>
+    </div>
+
+    <form id="foundingForm" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+      <div style="grid-column:1/-1">
+        <label for="ffName" style="display:block;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:8px">Name</label>
+        <input type="text" id="ffName" required style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--rsm);padding:12px 14px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none">
+      </div>
+
+      <div>
+        <label for="ffRole" style="display:block;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:8px">Role</label>
+        <select id="ffRole" required style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--rsm);padding:12px 14px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none">
+          <option value="">Select…</option>
+          <option>Board Chair</option>
+          <option>Board Member</option>
+          <option>Superintendent</option>
+          <option>District Cabinet</option>
+          <option>Principal</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="ffEmail" style="display:block;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:8px">Best Email</label>
+        <input type="email" id="ffEmail" required style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--rsm);padding:12px 14px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none">
+      </div>
+
+      <div style="grid-column:1/-1">
+        <label for="ffDistrict" style="display:block;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:8px">District + State <span style="color:var(--slate);text-transform:none;letter-spacing:0;font-size:10px">(optional)</span></label>
+        <input type="text" id="ffDistrict" style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--rsm);padding:12px 14px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none">
+      </div>
+
+      <div style="grid-column:1/-1">
+        <div style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:14px">What does your board need most right now?</div>
+        <div style="display:grid;gap:12px">
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A read on whether our financial picture matches our public story" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A read on whether our financial picture matches our public story</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A framework for the 5 data points we should be tracking" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A framework for the 5 data points we should be tracking</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A cross-district peer conversation under NDA" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A cross-district peer conversation under NDA</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="Help preparing for the next budget vote" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> Help preparing for the next budget vote</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A walkthrough of the Founding Class structure" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A walkthrough of the Founding Class structure</label>
+        </div>
+      </div>
+
+      <div style="grid-column:1/-1">
+        <label for="ffOther" style="display:block;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:8px">Something else <span style="color:var(--slate);text-transform:none;letter-spacing:0;font-size:10px">(optional · short)</span></label>
+        <textarea id="ffOther" rows="3" style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--rsm);padding:12px 14px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none;resize:vertical;line-height:1.5"></textarea>
+      </div>
+
+      <div style="grid-column:1/-1;margin-top:8px">
+        <button type="submit" style="background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:var(--white);border:none;border-radius:var(--rsm);padding:16px 32px;font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .2s">Send to the Chief →</button>
+      </div>
+    </form>
   </div>
 </section>
 
 <!-- TALKING POINTS -->
 <section id="talking" class="mid">
-  <div class="section-label">Key Messages · What the Evidence Shows</div>
-  <h2 class="section-title" style="color:var(--white)">What the evidence shows<br>for different audiences.</h2>
-  <p class="section-sub">These points are drawn directly from the verified data on this page — organized by who needs to hear them.</p>
+  <div class="section-label">Talking Points by Room · Searchable</div>
+  <h2 class="section-title" style="color:var(--white)">What to say. To whom. When.</h2>
+  <p class="section-sub">Search across all talking points. Filter by room. Internalize these — every point is built from verified data.</p>
 
   <div class="control-bar">
     <div class="search-wrap">
@@ -484,15 +571,40 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
       <input class="search-input" id="tpSearch" placeholder="Search talking points…" autocomplete="off">
     </div>
     <div class="filter-pills" id="tpFilters">
-      <button class="pill active" data-filter="all">All</button>
-      <button class="pill" data-filter="investor">Investors</button>
-      <button class="pill" data-filter="district">District Leaders</button>
-      <button class="pill" data-filter="board">School Boards</button>
-      <button class="pill" data-filter="competition">What Makes This Different</button>
+      <button class="pill active" data-filter="all">All Rooms</button>
+      <button class="pill" data-filter="investor">Investor Room</button>
+      <button class="pill" data-filter="district">District Room</button>
+      <button class="pill" data-filter="board">Board Room</button>
+      <button class="pill" data-filter="competition">Competition</button>
     </div>
   </div>
   <div class="result-count" id="tpCount"></div>
   <div class="tp-grid" id="tpGrid"></div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="section-label">The Team · Built by sitting district executives</div>
+  <h2 class="section-title">Practitioners doing the work.<br><em>Not consultants describing it.</em></h2>
+  <p class="section-sub">Two District Faculty members deliver alongside the Founder. Identities are protected because they hold their positions today. References available under mutual NDA for serious inquiries.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px">
+    <div class="finding-card">
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">Founder</div>
+      <div style="font-family:var(--fd);font-size:22px;color:var(--white);margin-bottom:10px;line-height:1.3">Chief Possibility Pilot</div>
+      <div style="font-size:13px;color:var(--fog);line-height:1.7">Architect of the District Lab · The IP behind the model</div>
+    </div>
+    <div class="finding-card">
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">District Faculty</div>
+      <div style="font-family:var(--fd);font-size:22px;color:var(--white);margin-bottom:10px;line-height:1.3">Sitting K-12 District Executive · Operations Leader</div>
+      <div style="font-size:13px;color:var(--fog);line-height:1.7">Mid-size urban district · Identity protected under NDA · Active in cohort delivery around day job</div>
+    </div>
+    <div class="finding-card">
+      <div style="font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px">District Faculty</div>
+      <div style="font-family:var(--fd);font-size:22px;color:var(--white);margin-bottom:10px;line-height:1.3">Sitting K-12 District Executive · Curriculum & Instruction Leader</div>
+      <div style="font-size:13px;color:var(--fog);line-height:1.7">Suburban district · Identity protected under NDA · Active in cohort delivery around day job</div>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -501,8 +613,8 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
     <div class="footer-tagline">Build Systems. Promote Justice.</div>
   </div>
   <div class="footer-info">
-    Tyra L. Harrison · Chief Possibility Pilot · EdJustice Collective<br>
-    chief@tieredjusticenow.com · theedjusticecollective.com<br>
+    Chief Possibility Pilot · EdJustice Collective<br>
+    <a href="mailto:chief@tieredjusticenow.com?subject=EJC%20District%20Lab%20Walkthrough%20Request" style="color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(0,152,154,.3);padding-bottom:1px">Email the Chief →</a> · theedjusticecollective.com<br>
     Crisis Intelligence Dashboard · May 2026
   </div>
 </footer>
@@ -513,61 +625,43 @@ footer{background:var(--ink);border-top:1px solid rgba(26,188,176,.12);padding:4
 // ════════════════════════════════════════════════════════════════════════════
 
 const CRISIS_DATA = [
-  { city:'Boston', state:'Massachusetts', amount:'$53M', amountNum:53, note:'Deficit · 300–400 staff cuts proposed · Board chair called for audit after the vote — "Both at the school level and at central office, it\'s time for an audit"', signal:'Board was the last to know.', tags:['governance','enrollment','structural'], link:'https://www.wgbh.org/news/education-news/2026-02-05/boston-teacher-layoffs-likely-as-bps-outlines-next-years-budget' },
+  { city:'Boston', state:'Massachusetts', amount:'$53M', amountNum:53, note:'Deficit · 300–400 staff cuts proposed for FY27 · Superintendent outlining options as state aid plateaus and fixed costs rise', signal:'Board was the last to know.', tags:['governance','enrollment','structural'], link:'https://www.wgbh.org/news/education-news/2026-02-05/boston-teacher-layoffs-likely-as-bps-outlines-next-years-budget' },
   { city:'Philadelphia', state:'Pennsylvania', amount:'$300M', amountNum:300, note:'Structural deficit · Result of decades of underfunding + ESSER expiration + charter payments + rising health care costs', signal:'$225M in cuts required for 2026–27.', tags:['structural','esser','federal'], link:'https://www.chalkbeat.org/philadelphia/2026/03/13/plan-to-close-budget-deficit-focuses-on-substitutes-and-central-office/' },
-  { city:'Minneapolis', state:'Minnesota', amount:'$50.5M', amountNum:50.5, note:'Deficit rose from $30.3M projection · 187 full-time positions eliminated · Nearby St. Paul in crisis despite new voter-approved taxes', signal:'New tax revenue: not enough.', tags:['structural','enrollment','esser'], link:'https://www.startribune.com/minnesota-schools-again-face-budget-deficits-and-cuts-look-up-your-districts-shortfall/601639881' },
   { city:'Sacramento City Unified', state:'California', amount:'$124.5M', amountNum:124.5, note:'Projected by 2028 · Cash could run out by June 2026 · State oversight agency echoed warnings from a review 7 years prior that went unheeded', signal:'Same warning. Seven years later. Nothing changed.', tags:['structural','governance','federal'], link:'https://www.cbsnews.com/amp/sacramento/news/sacramento-city-schools-financial-deficit' },
-  { city:'Oshkosh Area', state:'Wisconsin', amount:'$10.9M', amountNum:10.9, note:'Deficit after cutting 66 jobs — still $3.1M short · Board member: "This questions the faith I have in the district administration\'s financial leadership"', signal:'Cuts made. Still not enough. Board losing faith.', tags:['governance','structural'], link:'https://fox11online.com/news/crisis-in-the-classroom/additional-31m-deficit-for-2026-27-may-force-oshkosh-school-district-to-make-more-cuts' },
+  { city:'Oshkosh Area', state:'Wisconsin', amount:'$10.9M', amountNum:10.9, note:'Projected deficit after cutting 66 jobs in January · Still $3.1M short · Outgoing board member said the situation questions her faith in district administration\'s financial leadership (FOX 11, April 2026)', signal:'Cuts made. Still not enough. Board losing faith.', tags:['governance','structural'], link:'https://fox11online.com/news/crisis-in-the-classroom/additional-31m-deficit-for-2026-27-may-force-oshkosh-school-district-to-make-more-cuts' },
   { city:'Meriden Public Schools', state:'Connecticut', amount:'$8.2M', amountNum:8.2, note:'Planning cuts to help close deficit for 2026–27 · Enrollment decline + rising costs + state funding formula lag', signal:'Formula funding not keeping pace with reality.', tags:['enrollment','structural'], link:'https://principalsdesk.org/2026/02/26/why-school-employee-layoffs-are-rising-in-2026-budget-deficits-enrollment-declines-and-policy-pressures/' },
   { city:'Plumas Unified', state:'California', amount:'$9.5M', amountNum:9.5, note:'Eliminated positions to address structural deficit · Rural district with limited alternative funding streams', signal:'Rural districts carry ESSER cliff hardest.', tags:['esser','structural','enrollment'], link:'https://principalsdesk.org/2026/02/26/why-school-employee-layoffs-are-rising-in-2026-budget-deficits-enrollment-declines-and-policy-pressures/' },
-  { city:'Pittsburgh Public Schools', state:'Pennsylvania', amount:'$12.2M', amountNum:12.2, note:'Deficit · 9 school closures proposed · District warned it could struggle to meet payroll by January if state budget not passed · Deficit could grow significantly by 2028', signal:'Board questioned faith in administration\'s financial leadership.', tags:['governance','structural','federal'], link:'https://www.cbsnews.com/amp/pittsburgh/news/pittsburgh-public-schools-2026-budget-12-million-deficit' },
+  { city:'Pittsburgh Public Schools', state:'Pennsylvania', amount:'$12.2M', amountNum:12.2, note:'Deficit · 9 school closures proposed under Superintendent Walters\' plan · $95M in state funding not yet received · Payroll at risk by January if state budget not passed · Deficit could grow significantly by 2028', signal:'Closures proposed. Payroll at risk. State funding delayed.', tags:['governance','structural','federal'], link:'https://www.cbsnews.com/amp/pittsburgh/news/pittsburgh-public-schools-2026-budget-12-million-deficit' },
   { city:'California Statewide', state:'Multiple Districts', amount:'5,000+ layoffs', amountNum:5, note:'5,000+ preliminary layoff notices statewide · Declining enrollment + lost COVID dollars + increased costs · Most pink slips to classified employees', signal:'Meriden: $8.2M · Plumas: $9.5M · Pattern is national.', tags:['esser','enrollment','federal'], link:'https://edsource.org/2026/california-school-layoffs-budget-pink-slips/753606' },
 ];
 
 const FINDINGS_DATA = [
-  { num:'01', title:'U-Shaped Recovery — The Middle Has Been Left Behind', body:'The post-pandemic recovery is U-shaped. Highest-income and lowest-income districts are recovering. Middle-income districts — 30–70% of students receiving federally subsidized lunches — have seen the least improvement on average.', ejc:'Federal pandemic relief drove recovery in the lowest-income districts. That money is gone. Middle-income districts — the ones now filling the budget crisis headlines — have no comparable safety net and are the most exposed.', tags:['recovery','middle'] },
-  { num:'02', title:'The Learning Decline Began in 2013 — Not 2020', body:'American schools entered a sustained academic decline in 2013. Grade 8 reading scores are at their lowest point since 1990. Grade 4 scores are at pre-2003 levels. The annual reading loss before the pandemic was as large as the loss during the pandemic.', ejc:'This is a structural problem, not a pandemic problem. The pandemic made it visible. The cause is deeper — and requires more than a curriculum fix.', tags:['reading','recovery','leadership'] },
-  { num:'03', title:'Math Is Recovering. Reading Still Lagged Through 2024.', body:'Math achievement rebounded immediately after the pandemic. Reading continued declining through 2024. In 2025, the first signs of a reading turnaround emerged — but only in states that had strong implementation in place.', ejc:'The reading curriculum exists. The research exists. What determines whether students benefit is whether the adults in the building have the systems to actually put it into practice.', tags:['math','reading','recovery'] },
-  { num:'04', title:'Science of Reading Works — In Schools That Are Built to Use It', body:'Every state that improved in reading between 2022 and 2025 had implemented evidence-based reading reform. No state that skipped those reforms improved. The research is clear — but only effective where the conditions exist to use it.', ejc:'The reform alone is not enough. Schools that improve are the ones where leadership has built the infrastructure to carry it out. The same reform in a different building produces different results.', tags:['reading','leadership'] },
-  { num:'05', title:'1 in 4 Students Is Chronically Absent', body:'23% of students were chronically absent in 2024–2025 — still above the 15% pre-pandemic baseline. If absence rates had returned to pre-pandemic levels, academic recovery would have been measurably faster for all students regardless of income.', ejc:'Chronic absenteeism is a warning signal — students who feel unsupported stop showing up. The schools recovering fastest are the ones with early warning systems that catch students before they disappear.', tags:['absenteeism','recovery'] },
-  { num:'06', title:'108 School Districts Are Beating the Odds', body:'108 districts improved substantially faster than matched peers with identical demographics, income levels, and community characteristics. Harvard and Stanford recommend pairing these districts with comparable ones to share what they are doing.', ejc:'Same demographics. Same income. Same challenges. Different outcomes. The difference is how those districts are led and organized. That is the point — and it is the basis for EJC District Lab.', tags:['leadership','recovery'] },
+  { num:'01', title:'U-Shaped Recovery — The Middle Has Been Left Behind', body:'The post-pandemic recovery is U-shaped. Highest-income and lowest-income districts are recovering. Middle-income districts — 30–70% of students receiving federally subsidized lunches — have seen the least improvement on average.', ejc:'EJC signal: ESSER drove low-income recovery. ESSER is gone. Middle-income districts — now filling the budget crisis headlines — are the most exposed. They are the District Lab\'s primary market.', tags:['recovery','middle'] },
+  { num:'02', title:'The Learning Recession Began in 2013 — Not 2020', body:'American schools entered a "learning recession" in 2013. Grade 8 reading scores are at their lowest point since 1990. Grade 4 scores are at pre-2003 levels. The annual reading loss before the pandemic was as large as the loss during the pandemic.', ejc:'EJC signal: This is structural, not pandemic-caused. Structural problems require structural solutions — not more training.', tags:['reading','recovery','leadership'] },
+  { num:'03', title:'Math Recovering. Reading Still Declining — Until 2025.', body:'Math achievement rebounded immediately post-pandemic. Reading continued declining through 2024. In 2025, the first signs of a reading turnaround emerged — but only in states with strong implementation infrastructure.', ejc:'EJC signal: The curriculum exists. The science exists. The failure is in the operating systems that turn policy into practice at the district level.', tags:['math','reading','recovery'] },
+  { num:'04', title:'Science of Reading Works — Where Leadership Implements It', body:'All states that improved in reading 2022–2025 implemented comprehensive science of reading reforms. None of the states that eschewed literacy reforms improved. Evidence-based reading reform is "necessary but insufficient" without the infrastructure to implement it.', ejc:'EJC signal: "Necessary but insufficient" is the exact argument for leadership infrastructure. The reform exists. The implementation fails without operating systems.', tags:['reading','leadership'] },
+  { num:'05', title:'23% Chronic Absenteeism — Still Above Pre-Pandemic', body:'23% of students were chronically absent in 2024–2025 — down from peak, but still above the 15% pre-pandemic baseline. If absence rates had returned to pre-pandemic levels, recovery would have been 0.03–0.05 grade equivalents faster for all income levels.', ejc:'EJC signal: Absenteeism is a systems problem. The infrastructure to catch students before they disappear — early warning, support routing, intervention protocols — is what EJC builds.', tags:['absenteeism','recovery'] },
+  { num:'06', title:'108 Districts Rising — Proof That Leadership Matters', body:'108 districts improved substantially faster than matched peers with identical demographics, income levels, and urbanicity. Researchers call on states to pair each "District on the Rise" with comparable peers to share recovery strategies.', ejc:'EJC signal: Harvard and Stanford just published the academic case for the District Lab residential class. The cross-district peer cohort is the recommendation. EJC delivers it.', tags:['leadership','recovery'] },
 ];
 
 const STATS_DATA = [
-  { metric:'US Educational Consulting & Training Market', cat:'market', catLabel:'Market', value:'~$17 billion (2023)', source:'MarketResearch.com', sortVal:17000000000 },
-  { metric:'US PD Market annual growth rate', cat:'market', catLabel:'Market', value:'6.9% CAGR through 2029', source:'Technavio', sortVal:6.9 },
-  { metric:'PD spend per teacher annually', cat:'market', catLabel:'Market', value:'$8,300 — 3.5% of budgets, unchanged 20 years', source:'EdWeek / federal data', sortVal:8300 },
-  { metric:'Number of US public school districts', cat:'market', catLabel:'Market', value:'~13,000', source:'NCES', sortVal:13000 },
-  { metric:'4th graders below NAEP Basic reading (2024)', cat:'achievement', catLabel:'Achievement', value:'~40% — largest % since 2002', source:'NAGB 2024', sortVal:40 },
-  { metric:'12th graders below NAEP Basic math (2024)', cat:'achievement', catLabel:'Achievement', value:'45% — highest % ever recorded', source:'NAGB 2024', sortVal:45 },
-  { metric:'8th grade math vs pre-pandemic', cat:'achievement', catLabel:'Achievement', value:'9 points below — one full grade level', source:'NAGB 2024', sortVal:9 },
-  { metric:'States improving in reading (2024)', cat:'achievement', catLabel:'Achievement', value:'Zero', source:'NAGB 2024', sortVal:0 },
-  { metric:'Year learning recession began', cat:'scorecard', catLabel:'Scorecard 2026', value:'2013 — 7 years before COVID', source:'Stanford SEDA / Harvard CEPR 2026', sortVal:2013 },
+  { metric:'Number of US public school districts (regular)', cat:'market', catLabel:'Market', value:'~13,300', source:'NCES Digest 2022, Table 214.30', sortVal:13300 },
+  { metric:'Year learning recession began', cat:'scorecard', catLabel:'Scorecard 2026', value:'2013 — 7 years before COVID', source:'Education Scorecard May 2026 (Harvard CEPR / Stanford SEDA / Dartmouth)', sortVal:2013 },
   { metric:'Districts on the Rise — outperforming matched peers', cat:'scorecard', catLabel:'Scorecard 2026', value:'108 districts', source:'Education Scorecard May 2026', sortVal:108 },
   { metric:'Chronic student absenteeism (2024–25)', cat:'scorecard', catLabel:'Scorecard 2026', value:'23% — vs 15% pre-pandemic', source:'Education Scorecard May 2026', sortVal:23 },
   { metric:'States improving reading with literacy reform', cat:'scorecard', catLabel:'Scorecard 2026', value:'All reforming states improved · Zero non-reforming states improved', source:'Education Scorecard May 2026', sortVal:100 },
-  { metric:'Teaching positions empty or underqualified', cat:'workforce', catLabel:'Workforce', value:'411,549 — 1 in 8 nationally', source:'USDOE 2024', sortVal:411549 },
-  { metric:'Districts unable to fill positions (2024–25)', cat:'workforce', catLabel:'Workforce', value:'74%', source:'USDOE 2024', sortVal:74 },
-  { metric:'Teacher departures that were voluntary', cat:'workforce', catLabel:'Workforce', value:'74% — not retirement', source:'LPI 2024', sortVal:74 },
-  { metric:'Cost to replace one teacher (large district)', cat:'workforce', catLabel:'Workforce', value:'~$25,000 (2024)', source:'LPI 2024', sortVal:25000 },
-  { metric:'Cost to replace one principal', cat:'workforce', catLabel:'Workforce', value:'~$75,000', source:'Wallace Foundation', sortVal:75000 },
-  { metric:'Principal annual turnover rate', cat:'workforce', catLabel:'Workforce', value:'~18%', source:'USDOE via Wallace Foundation', sortVal:18 },
-  { metric:'Boston Public Schools deficit (current FY)', cat:'financial', catLabel:'Financial Crisis', value:'$53 million', source:'Boston Globe / GBH, Feb 2026', sortVal:53000000 },
-  { metric:'Philadelphia School District structural deficit', cat:'financial', catLabel:'Financial Crisis', value:'$300 million', source:'Chalkbeat / PhilaSD.org, Mar 2026', sortVal:300000000 },
-  { metric:'Minneapolis Public Schools deficit', cat:'financial', catLabel:'Financial Crisis', value:'$50.5 million — rose from $30.3M projection', source:'Star Tribune, Apr 2026', sortVal:50500000 },
-  { metric:'Sacramento City Unified projected deficit (2028)', cat:'financial', catLabel:'Financial Crisis', value:'$124.5 million', source:'CBS Sacramento', sortVal:124500000 },
-  { metric:'California statewide layoff notices (2026)', cat:'financial', catLabel:'Financial Crisis', value:'5,000+ preliminary pink slips', source:'EdSource, Mar 2026', sortVal:5000 },
-  { metric:'Title II-A funding status', cat:'federal', catLabel:'Federal Funding', value:'$2.19B delayed — elimination proposed FY27', source:'EdWeek May 2026', sortVal:2190000000 },
-  { metric:'Title I + II transferred to Dept of Labor', cat:'federal', catLabel:'Federal Funding', value:'Programs 7× larger than DOL currently manages', source:'EdWeek 2025', sortVal:7 },
-  { metric:'ESSER funds final obligation deadline', cat:'federal', catLabel:'Federal Funding', value:'September 30, 2024 — structural deficits now surfacing', source:'USDOE', sortVal:2024 },
+  { metric:'Boston Public Schools deficit (FY27 outlook)', cat:'financial', catLabel:'Financial Crisis', value:'$53 million', source:'WGBH, February 2026', sortVal:53000000 },
+  { metric:'Philadelphia School District structural deficit', cat:'financial', catLabel:'Financial Crisis', value:'$300 million', source:'Chalkbeat, March 2026', sortVal:300000000 },
+  { metric:'Sacramento City Unified projected deficit (2028)', cat:'financial', catLabel:'Financial Crisis', value:'$124.5 million', source:'CBS Sacramento, 2026', sortVal:124500000 },
+  { metric:'California statewide layoff notices (2026)', cat:'financial', catLabel:'Financial Crisis', value:'5,000+ preliminary pink slips', source:'EdSource, March 2026', sortVal:5000 },
 ];
 
 const JUXTA_DATA = [
-  { left:{ district:'Districts in financial crisis', detail:'Boston, Philadelphia, Minneapolis, Sacramento, Oshkosh, Meriden, Plumas, Pittsburgh — all in 2026', tag:'In nearly every case: board was the last to know.', tagType:'red' }, right:{ district:'Academic decline began in 2013', detail:'Seven years before COVID. The pandemic accelerated a structural decline already in motion.', tag:'This is a long-term structural problem.', tagType:'teal' }, theme:'governance' },
-  { left:{ district:'Middle-income districts most at risk', detail:'Federal pandemic relief is gone. State formulas are lagging. Enrollment is declining. Costs are rising.', tag:'No financial safety net remaining.', tagType:'red' }, right:{ district:'Middle-income districts recovering the least', detail:'The same income band appearing in the budget headlines shows the least academic recovery in the Harvard/Stanford data.', tag:'The same districts. Two different crises.', tagType:'teal' }, theme:'middle' },
-  { left:{ district:'Financial information withheld from boards', detail:'Sacramento was warned by state oversight agencies in 2018. The same findings surfaced again in 2026. Nothing changed in between.', tag:'Same warning. Eight years apart.', tagType:'red' }, right:{ district:'Evidence-based reform works only where conditions exist', detail:'Every state that improved in reading had the right programs. The difference was whether leaders could carry them out.', tag:'The program is not the problem. The systems are.', tagType:'teal' }, theme:'infrastructure' },
-  { left:{ district:'Districts making cuts without a clear picture', detail:'Without visibility into what is working, budget cuts eliminate the wrong things — often the supports students depend on most.', tag:'The wrong cuts. For the wrong reasons.', tagType:'red' }, right:{ district:'108 districts outperforming comparable peers', detail:'Same demographics. Same income. Same challenges. Different outcomes. Harvard says: figure out what they are doing and spread it.', tag:'Leadership is the difference.', tagType:'teal' }, theme:'recovery' },
-  { left:{ district:'Boards surprised repeatedly', detail:'Oshkosh board: "This questions the faith I have in the district administration\'s financial leadership." Boston: board chair called for an audit after the budget vote.', tag:'A pattern, not an exception.', tagType:'red' }, right:{ district:'Cross-district learning is the recommended solution', detail:'"Facilitating partnerships between districts could yield significant dividends if districts successfully share ideas for improvement." — Harvard/Stanford 2026', tag:'That is exactly what EJC District Lab does.', tagType:'teal' }, theme:'recovery' },
+  { left:{ district:'Districts in financial crisis — board last to know', detail:'Boston, Philadelphia, Sacramento, Oshkosh, Meriden, Plumas, Pittsburgh — all in 2026', tag:'Board was last to know', tagType:'red' }, right:{ district:'Learning recession began in 2013', detail:'Seven years before COVID. The pandemic accelerated a structural decline already in motion — accountability systems dismantled, social media rising', tag:'Structural problem. Structural solution required.', tagType:'teal' }, theme:'governance' },
+  { left:{ district:'Middle-income districts most exposed', detail:'ESSER gone · state formulas lagging · enrollment declining · costs rising', tag:'No federal safety net remaining', tagType:'red' }, right:{ district:'Middle-income districts recovering least', detail:'The same income band now in the financial headlines shows the least academic recovery in the Scorecard', tag:'Same districts. Both crises.', tagType:'teal' }, theme:'middle' },
+  { left:{ district:'CFOs withholding data from boards', detail:'Sacramento warned 7 years ago — state oversight agency echoed the exact same findings from 2018. Nothing changed.', tag:'Systemic information failure', tagType:'red' }, right:{ district:'Science of reading: necessary but insufficient', detail:'Reform only works where leadership infrastructure exists to implement it. The curriculum is not the problem. The operating systems are.', tag:'Leadership is the variable.', tagType:'teal' }, theme:'infrastructure' },
+  { left:{ district:'Districts cutting blindly — no framework', detail:'Districts making budget cuts without the operating infrastructure to know which cuts protect students and which eliminate bloat', tag:'Wrong cuts. Wrong reasons.', tagType:'red' }, right:{ district:'108 Districts on the Rise', detail:'Same demographics. Same income. Same challenges. Different outcomes. Harvard says: pair them so they can share what they did.', tag:'That is the District Lab class.', tagType:'teal' }, theme:'recovery' },
+  { left:{ district:'Boards caught by surprise — repeatedly', detail:'Oshkosh: outgoing board member said the situation questions her faith in district administration\'s financial leadership (FOX 11, April 2026) · Boston: $53M deficit · 300–400 staff cuts proposed for FY27', tag:'Governance breakdown.', tagType:'red' }, right:{ district:'Cross-district peer sharing: Harvard\'s recommendation', detail:'"Facilitating partnerships between districts could yield significant dividends if districts successfully share ideas for improvement." — Harvard Graduate School of Education / Stanford SEDA, May 2026', tag:'EJC builds this. Quarterly. Residential.', tagType:'teal' }, theme:'recovery' },
 ];
 
 const REV_DATA = [
@@ -579,71 +673,66 @@ const REV_DATA = [
   { stream:'Operating System Builds', tier:'Relationship', tierKey:'relationship', y1:'$75K–$150K', y2:'$150K–$225K', y3:'$225K–$375K', y1num:112, y2num:187, y3num:300 },
   { stream:'Framework Products', tier:'IP', tierKey:'ip', y1:'—', y2:'$50K–$100K', y3:'$100K–$150K', y1num:0, y2num:75, y3num:125 },
   { stream:'Licensed Curriculum', tier:'IP', tierKey:'ip', y1:'—', y2:'$50K–$125K', y3:'$125K–$275K', y1num:0, y2num:87, y3num:200 },
-  { stream:'CSA Credentialing Fees', tier:'IP', tierKey:'ip', y1:'—', y2:'$15K–$30K', y3:'$37K–$75K', y1num:0, y2num:22, y3num:56 },
   { stream:'Annual Convening', tier:'Scale', tierKey:'scale', y1:'—', y2:'$50K–$75K', y3:'$75K–$100K', y1num:0, y2num:62, y3num:87 },
   { stream:'Campus Facility Rental', tier:'Scale', tierKey:'scale', y1:'—', y2:'—', y3:'$100K–$300K', y1num:0, y2num:0, y3num:200 },
 ];
 
 const TP_DATA = [
-  { room:'For Investors', key:'investor', points:[
-    'The US educational services market is $17 billion and growing at 6.9% annually. No one has built a residential program for district executive teams — with lodging included — in the public school sector.',
-    'Search "school district financial crisis 2026." In nearly every case the school board was the last to know. That is a solvable problem.',
-    'Harvard and Stanford identified 108 school districts outperforming comparable peers. The common factor: how they were led and organized. That is the gap EJC fills.',
-    'Student academic decline began in 2013 — seven years before COVID. This is a structural problem. It requires a structural solution.',
-    'Year 1 projected revenue: $640K–$1.25M. Year 3 with permanent campus: $2.32M–$4.29M. Eleven revenue streams across four tiers.',
-    'Harvard invited me to present at their national convening — alongside policy makers and board members — as the practitioner explaining how these systems actually work on the ground.',
-    'The New York Times covered my work in October 2022.',
+  { room:'Investor Room', key:'investor', points:[
+    'The specific gap — residential, credentialed, board-facing executive education for K-12 districts — is completely unoccupied at scale.',
+    'Search "school district financial crisis 2026." Count the headlines. In nearly every case leadership was the last to know.',
+    'Harvard and Stanford\'s 2026 Scorecard identified 108 districts outperforming matched peers. The reason: leadership infrastructure. That is what EJC builds.',
+    'The learning recession began in 2013 — seven years before COVID. Structural problem. Structural solution. That is EJC District Lab.',
+    'Year 1: $640K–$1.25M. Year 3: $2.28M–$4.22M with permanent campus. Stream-by-stream math. Not top-down projection.',
+    'Plenary speaker at the Harvard Strategic Data Project 2023 Convening — "Battle Lines: The Science of Reading" — moderated by Emily Hanford ("Sold a Story"), alongside Todd Collins and James Kim. The conversation about how systems actually work, in the room with the data researchers and policy makers shaping the field.',
+    'Featured in the New York Times — "Sound It Out," October 2022 — and on the Extraordinary Districts podcast (The Education Trust). The work is in the record.',
+    'I\'m a Builder. The model is built. The market is documented. I need the room that funds what comes next.',
   ]},
-  { room:'For District Leaders', key:'district', points:[
-    'Teachers are leaving because the systems that should support them were never fully built. That is an organizational problem — and it is solvable.',
-    'The Reach Score™ shows whether your resources are deployed where students actually need them — before the next budget cycle.',
-    'Harvard and Stanford found 108 districts outperforming comparable peers. Same student population. Same income levels. Different outcomes. The difference was organizational.',
-    'Districts that build coherent operating systems see measurable improvement in student outcomes within 18–24 months.',
-    'Replacing one teacher costs approximately $25,000. In a district of 20 schools, retaining three additional teachers per building saves $1.5M annually.',
-    'Participants leave with a working system built from their own documents — not notes from a seminar.',
+  { room:'District Room', key:'district', points:[
+    'Your teachers are leaving because the systems that support them were never fully built. Leadership infrastructure problem — not a compensation problem.',
+    'The Reach Score™ tells you whether your resources are deployed where students actually need them. Right now. Before the next budget cycle.',
+    'Stanford and Harvard identified 108 districts outperforming their peers. Same demographics. Same income. Same challenges. Different outcomes. Leadership made the difference.',
+    'The District Lab model is designed to drive measurable improvement in student outcomes within 18–24 months of full implementation.',
+    'Teacher retention has measurable financial value beyond the human one. The Lab is designed to pay for itself before scores move.',
+    'You leave with a functioning operating system — not notes. Built from your own documents, in your own language, by your own team.',
   ]},
-  { room:'For School Boards', key:'board', points:[
-    'Every school board commits to transparency. What most boards lack are the specific tools to see what is actually happening in their district finances.',
-    'Search "school district financial crisis 2026." In nearly every case, the board learned about the problem after it became a headline.',
-    'Five financial indicators — tracked consistently — would have surfaced every major district deficit in this dashboard before it became a crisis.',
-    'Federal education funding is in active transition. Programs that school districts have relied on for decades are now under review, frozen, or proposed for elimination.',
-    'A board that understands what it is looking at gives its superintendent something to work with. That is the purpose of the Governance Lab.',
-    'The community has a right to know what their school board knows. The public briefing is where that conversation happens.',
+  { room:'Board Room', key:'board', points:[
+    'Every board says it\'s committed to transparency. The Governance Lab is the day those words become specific.',
+    'A search of "school district financial crisis 2026" returns dozens of headlines right now. In nearly every case the board was the last to know.',
+    'The Visibility Framework gives you five specific data points. If any board anywhere had been tracking them, they would have surfaced the crisis before the headline.',
+    'Federal funding is in active transition — pandemic-era relief has expired, structural deficits are now surfacing across the country (Philadelphia $300M, Sacramento $124.5M projected, Boston $53M FY27), and governance literacy must adapt before the next fiscal cycle.',
+    'Governance works both ways. A board that governs well gives its superintendent something to work with — not just something to manage.',
+    'The community deserves to know what their board knows. The Governance Lab is designed to make that exchange specific and accountable.',
   ]},
-  { room:'What Makes This Different', key:'competition', points:[
-    'Most professional development for school leaders happens in hotel conference rooms. No lodging. No continuity. People leave, the learning dissipates.',
-    'No portable, independently accredited systems leadership credential exists for K–12 district executives. The Certified Systems Architect is the first.',
-    'Six Sigma built a $200 billion market by credentialing process improvement in manufacturing. The same model applies to leadership systems in education.',
-    'Large training companies can hire practitioners. They cannot replicate 35 years of specific district operating experience — or the tools built from that experience.',
+  { room:'Competition Questions', key:'competition', points:[
+    'Solution Tree runs hotel ballrooms. Harvard charges $375/night separately. TNTP is virtual. The only residential program with lodging included serves private schools exclusively.',
+    'LEED built an entire sustainable construction industry from zero — an independent credential created the "sustainability consultant" role and a new market that did not previously exist. We are building the same kind of credentialing path for leadership infrastructure in K-12 — selection underway now.',
+    'Large vendors can hire practitioners. They cannot buy 35 years of specific district operating experience and the IP that came from it. The moat is not the model.',
   ]},
 ];
 
 const HERO_STATS = [
-  { num:'$17B', label:'US educational services market · growing 6.9% each year' },
-  { num:'ZERO', label:'Residential K–12 executive programs with lodging included — in the public school sector' },
-  { num:'2013', label:'Year student achievement began declining — seven years before COVID' },
-  { num:'108', label:'School districts outperforming comparable peers · Harvard + Stanford · 2026' },
+  { num:'$300M', label:'Philadelphia structural deficit · just one district · Chalkbeat, March 2026' },
+  { num:'ZERO', label:'Residential public K–12 executive programs with lodging included' },
+  { num:'2013', label:'Year the learning recession began — seven years before COVID · Education Scorecard 2026' },
+  { num:'108', label:'Districts rising faster than matched peers · Education Scorecard May 2026' },
 ];
 
 const MARKET_BARS = [
-  { label:'US Ed Consulting Market', pct:90, val:'$17B', color:'linear-gradient(90deg,#0D6B64,#1ABCB0)' },
-  { label:'Market growth (CAGR)', pct:35, val:'6.9%', color:'linear-gradient(90deg,#0D6B64,#1ABCB0)' },
-  { label:'PD spend / teacher / yr', pct:42, val:'$8,300', color:'linear-gradient(90deg,#0D6B64,#1ABCB0)' },
-  { label:'Districts — US total', pct:65, val:'13,000', color:'linear-gradient(90deg,#0D6B64,#1ABCB0)' },
-  { label:'Cost: replace teacher', pct:25, val:'$25K', color:'linear-gradient(90deg,#B5621A,#F28C38)' },
-  { label:'Cost: replace principal', pct:38, val:'$75K', color:'linear-gradient(90deg,#B5621A,#F28C38)' },
-  { label:'Positions unstaffed', pct:88, val:'411,549', color:'linear-gradient(90deg,#c03535,#E05555)' },
-  { label:'Districts can\'t fill roles', pct:74, val:'74%', color:'linear-gradient(90deg,#c03535,#E05555)' },
+  { label:'Philadelphia deficit', pct:95, val:'$300M', color:'linear-gradient(90deg,#c03535,#E05555)' },
+  { label:'Sacramento (proj 2028)', pct:60, val:'$124.5M', color:'linear-gradient(90deg,#c03535,#E05555)' },
+  { label:'Boston deficit FY27', pct:40, val:'$53M', color:'linear-gradient(90deg,#c03535,#E05555)' },
+  { label:'Pittsburgh deficit', pct:22, val:'$12.2M', color:'linear-gradient(90deg,#c03535,#E05555)' },
+  { label:'Oshkosh deficit', pct:20, val:'$10.9M', color:'linear-gradient(90deg,#c03535,#E05555)' },
+  { label:'California pink slips (2026)', pct:75, val:'5,000+', color:'linear-gradient(90deg,#B5621A,#F28C38)' },
+  { label:'US regular districts (NCES)', pct:70, val:'~13,300', color:'linear-gradient(90deg,#007378,#00989a)' },
 ];
 
 const ACHIEVEMENT_BARS = [
-  { label:'4th grade below Basic reading', pct:40, val:'~40%', color:'linear-gradient(90deg,#c03535,#E05555)' },
-  { label:'12th grade below Basic math', pct:45, val:'45%', color:'linear-gradient(90deg,#c03535,#E05555)' },
   { label:'Chronic absenteeism 2024–25', pct:23, val:'23%', color:'linear-gradient(90deg,#B5621A,#F28C38)' },
   { label:'Pre-pandemic absenteeism', pct:15, val:'15%', color:'linear-gradient(90deg,#1a7a50,#34C78A)' },
-  { label:'States improving reading (2024)', pct:2, val:'Zero', color:'linear-gradient(90deg,#c03535,#E05555)' },
   { label:'Districts on the Rise', pct:55, val:'108', color:'linear-gradient(90deg,#1a7a50,#34C78A)' },
-  { label:'Year recession began', pct:72, val:'2013', color:'linear-gradient(90deg,#0D6B64,#1ABCB0)' },
+  { label:'Year recession began', pct:72, val:'2013', color:'linear-gradient(90deg,#007378,#00989a)' },
 ];
 
 // ════════════════════════════════════════════════════════════════════════════
@@ -702,7 +791,7 @@ function renderFindings(data) {
       <div class="finding-num">${f.num}</div>
       <div class="finding-title">${f.title}</div>
       <div class="finding-body">${f.body}</div>
-      <div class="finding-ejc"><strong>What this means:</strong> ${f.ejc}</div>
+      <div class="finding-ejc">${f.ejc}</div>
       <div class="finding-tags">${f.tags.map(t=>`<span class="finding-tag">${t}</span>`).join('')}</div>`;
     grid.appendChild(card);
   });
@@ -755,8 +844,8 @@ function renderRevTable(data) {
       <td>TOTAL</td>
       <td></td>
       <td>$640K–$1.25M</td>
-      <td>$1.39M–$2.63M</td>
-      <td>$2.32M–$4.29M</td>
+      <td>$1.38M–$2.60M</td>
+      <td>$2.28M–$4.22M</td>
     </tr>`;
 }
 
@@ -1025,6 +1114,43 @@ setTimeout(()=>{
 
 document.getElementById('crisisCount').innerHTML =
   `Showing <span>${CRISIS_DATA.length}</span> of ${CRISIS_DATA.length} districts`;
+
+// ════════════════════════════════════════════════════════════════════════════
+// FOUNDING CLASS FORM — mailto-based, zero backend
+// ════════════════════════════════════════════════════════════════════════════
+document.getElementById('foundingForm')?.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('ffName').value.trim();
+  const role = document.getElementById('ffRole').value.trim();
+  const email = document.getElementById('ffEmail').value.trim();
+  const district = document.getElementById('ffDistrict').value.trim();
+  const needs = Array.from(document.querySelectorAll('input[name="ffNeed"]:checked')).map(c => c.value);
+  const other = document.getElementById('ffOther').value.trim();
+
+  const bodyLines = [
+    `Name: ${name}`,
+    `Role: ${role}`,
+    `Best Email: ${email}`,
+  ];
+  if (district) bodyLines.push(`District + State: ${district}`);
+  bodyLines.push('', 'What our board needs most right now:');
+  if (needs.length === 0) bodyLines.push('  (none selected)');
+  needs.forEach(n => bodyLines.push(`  • ${n}`));
+  if (other) { bodyLines.push('', 'Something else:', other); }
+  bodyLines.push('', '— Submitted from the EJC District Lab Crisis Intelligence Dashboard');
+
+  const subject = `Founding Class Interest — ${name}`;
+  const mailto = `mailto:chief@tieredjusticenow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+  window.location.href = mailto;
+
+  setTimeout(() => {
+    document.getElementById('foundingForm').style.display = 'none';
+    document.getElementById('ffSuccess').style.display = 'block';
+    const target = document.getElementById('founding');
+    if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+  }, 600);
+});
 </script>
 </body>
 </html>
