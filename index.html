@@ -241,13 +241,12 @@ footer{background:var(--ink);border-top:1px solid rgba(0,152,154,.12);padding:44
 <nav>
   <div class="nav-brand">EJC District Lab</div>
   <ul class="nav-links">
-    <li><a href="#crisis">Crisis Data</a></li>
+    <li><a href="#crisis">Crisis</a></li>
     <li><a href="#scorecard">Scorecard</a></li>
     <li><a href="#juxtaposition">Synthesis</a></li>
-    <li><a href="#market">Market Data</a></li>
-    <li><a href="#model">The Model</a></li>
+    <li><a href="#market">Data</a></li>
+    <li><a href="#model">Model</a></li>
     <li><a href="#founding">Founding Class</a></li>
-    <li><a href="#talking">Talking Points</a></li>
     <li><a href="#team">Team</a></li>
   </ul>
 </nav>
@@ -559,29 +558,6 @@ footer{background:var(--ink);border-top:1px solid rgba(0,152,154,.12);padding:44
   </div>
 </section>
 
-<!-- TALKING POINTS -->
-<section id="talking" class="mid">
-  <div class="section-label">Talking Points by Room · Searchable</div>
-  <h2 class="section-title" style="color:var(--white)">What to say. To whom. When.</h2>
-  <p class="section-sub">Search across all talking points. Filter by room. Internalize these — every point is built from verified data.</p>
-
-  <div class="control-bar">
-    <div class="search-wrap">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input class="search-input" id="tpSearch" placeholder="Search talking points…" autocomplete="off">
-    </div>
-    <div class="filter-pills" id="tpFilters">
-      <button class="pill active" data-filter="all">All Rooms</button>
-      <button class="pill" data-filter="investor">Investor Room</button>
-      <button class="pill" data-filter="district">District Room</button>
-      <button class="pill" data-filter="board">Board Room</button>
-      <button class="pill" data-filter="competition">Competition</button>
-    </div>
-  </div>
-  <div class="result-count" id="tpCount"></div>
-  <div class="tp-grid" id="tpGrid"></div>
-</section>
-
 <!-- TEAM -->
 <section id="team">
   <div class="section-label">The Team · Built by sitting district executives</div>
@@ -675,40 +651,6 @@ const REV_DATA = [
   { stream:'Licensed Curriculum', tier:'IP', tierKey:'ip', y1:'—', y2:'$50K–$125K', y3:'$125K–$275K', y1num:0, y2num:87, y3num:200 },
   { stream:'Annual Convening', tier:'Scale', tierKey:'scale', y1:'—', y2:'$50K–$75K', y3:'$75K–$100K', y1num:0, y2num:62, y3num:87 },
   { stream:'Campus Facility Rental', tier:'Scale', tierKey:'scale', y1:'—', y2:'—', y3:'$100K–$300K', y1num:0, y2num:0, y3num:200 },
-];
-
-const TP_DATA = [
-  { room:'Investor Room', key:'investor', points:[
-    'The specific gap — residential, credentialed, board-facing executive education for K-12 districts — is completely unoccupied at scale.',
-    'Search "school district financial crisis 2026." Count the headlines. In nearly every case leadership was the last to know.',
-    'Harvard and Stanford\'s 2026 Scorecard identified 108 districts outperforming matched peers. The reason: leadership infrastructure. That is what EJC builds.',
-    'The learning recession began in 2013 — seven years before COVID. Structural problem. Structural solution. That is EJC District Lab.',
-    'Year 1: $640K–$1.25M. Year 3: $2.28M–$4.22M with permanent campus. Stream-by-stream math. Not top-down projection.',
-    'Plenary speaker at the Harvard Strategic Data Project 2023 Convening — "Battle Lines: The Science of Reading" — moderated by Emily Hanford ("Sold a Story"), alongside Todd Collins and James Kim. The conversation about how systems actually work, in the room with the data researchers and policy makers shaping the field.',
-    'Featured in the New York Times — "Sound It Out," October 2022 — and on the Extraordinary Districts podcast (The Education Trust). The work is in the record.',
-    'I\'m a Builder. The model is built. The market is documented. I need the room that funds what comes next.',
-  ]},
-  { room:'District Room', key:'district', points:[
-    'Your teachers are leaving because the systems that support them were never fully built. Leadership infrastructure problem — not a compensation problem.',
-    'The Reach Score™ tells you whether your resources are deployed where students actually need them. Right now. Before the next budget cycle.',
-    'Stanford and Harvard identified 108 districts outperforming their peers. Same demographics. Same income. Same challenges. Different outcomes. Leadership made the difference.',
-    'The District Lab model is designed to drive measurable improvement in student outcomes within 18–24 months of full implementation.',
-    'Teacher retention has measurable financial value beyond the human one. The Lab is designed to pay for itself before scores move.',
-    'You leave with a functioning operating system — not notes. Built from your own documents, in your own language, by your own team.',
-  ]},
-  { room:'Board Room', key:'board', points:[
-    'Every board says it\'s committed to transparency. The Governance Lab is the day those words become specific.',
-    'A search of "school district financial crisis 2026" returns dozens of headlines right now. In nearly every case the board was the last to know.',
-    'The Visibility Framework gives you five specific data points. If any board anywhere had been tracking them, they would have surfaced the crisis before the headline.',
-    'Federal funding is in active transition — pandemic-era relief has expired, structural deficits are now surfacing across the country (Philadelphia $300M, Sacramento $124.5M projected, Boston $53M FY27), and governance literacy must adapt before the next fiscal cycle.',
-    'Governance works both ways. A board that governs well gives its superintendent something to work with — not just something to manage.',
-    'The community deserves to know what their board knows. The Governance Lab is designed to make that exchange specific and accountable.',
-  ]},
-  { room:'Competition Questions', key:'competition', points:[
-    'Solution Tree runs hotel ballrooms. Harvard charges $375/night separately. TNTP is virtual. The only residential program with lodging included serves private schools exclusively.',
-    'LEED built an entire sustainable construction industry from zero — an independent credential created the "sustainability consultant" role and a new market that did not previously exist. We are building the same kind of credentialing path for leadership infrastructure in K-12 — selection underway now.',
-    'Large vendors can hire practitioners. They cannot buy 35 years of specific district operating experience and the IP that came from it. The moat is not the model.',
-  ]},
 ];
 
 const HERO_STATS = [
@@ -849,19 +791,6 @@ function renderRevTable(data) {
     </tr>`;
 }
 
-function renderTalkingPoints(data) {
-  const grid = document.getElementById('tpGrid');
-  const countEl = document.getElementById('tpCount');
-  grid.innerHTML='';
-  const totalPoints = data.reduce((s,c)=>s+c.points.length,0);
-  countEl.innerHTML = `Showing <span>${totalPoints}</span> talking points across <span>${data.length}</span> rooms`;
-  data.forEach(card => {
-    const el = document.createElement('div');
-    el.className='tp-card'; el.dataset.room=card.key;
-    el.innerHTML=`<div class="tp-room">${card.room}</div>${card.points.map(p=>`<div class="tp-point" data-text="${p.toLowerCase()}">${p}</div>`).join('')}`;
-    grid.appendChild(el);
-  });
-}
 
 function renderBars() {
   const mEl = document.getElementById('marketBars');
@@ -1025,37 +954,6 @@ document.querySelectorAll('.rev-table th[data-col]').forEach(th => {
   });
 });
 
-// Talking points — search across all + filter by room
-let tpFilter='all', tpSearch='';
-
-function tpUpdate() {
-  const grid = document.getElementById('tpGrid');
-  const countEl = document.getElementById('tpCount');
-  let cards = tpFilter==='all' ? TP_DATA : TP_DATA.filter(c=>c.key===tpFilter);
-  if (!tpSearch) { renderTalkingPoints(cards); return; }
-  // Search within points — hide non-matching
-  renderTalkingPoints(cards);
-  let total=0;
-  grid.querySelectorAll('.tp-card').forEach(card => {
-    let cardHasMatch=false;
-    card.querySelectorAll('.tp-point').forEach(pt => {
-      const matches = pt.dataset.text.includes(tpSearch);
-      pt.style.display=matches?'':'none';
-      if (matches) { cardHasMatch=true; total++; }
-    });
-    card.style.display=cardHasMatch?'':'none';
-  });
-  countEl.innerHTML=`Showing <span>${total}</span> matching talking points`;
-}
-
-document.getElementById('tpSearch')?.addEventListener('input', e=>{ tpSearch=e.target.value.toLowerCase(); tpUpdate(); });
-document.getElementById('tpFilters')?.querySelectorAll('.pill').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('#tpFilters .pill').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active'); tpFilter=btn.dataset.filter; tpUpdate();
-  });
-});
-
 // ════════════════════════════════════════════════════════════════════════════
 // SCROLL + INTERSECTION OBSERVERS
 // ════════════════════════════════════════════════════════════════════════════
@@ -1100,7 +998,6 @@ renderFindings(FINDINGS_DATA);
 juxtaUpdate();
 statsUpdate();
 revUpdate();
-renderTalkingPoints(TP_DATA);
 renderBars();
 
 // Initial reveal pass
