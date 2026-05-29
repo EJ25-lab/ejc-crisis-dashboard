@@ -425,57 +425,45 @@ footer{background:var(--ink);border-top:1px solid rgba(0,152,154,.12);padding:44
   </div>
 </section>
 
-<!-- THE MODEL -->
+<!-- THE LAB -->
 <section id="model">
-  <div class="section-label">The EJC District Lab Revenue Model · Sortable</div>
-  <h2 class="section-title">10 revenue streams. 4 tiers.<br>Revenue every week of the year.</h2>
-  <p class="section-sub">Stream-by-stream math. Not a top-down projection. Sort any column to explore the model.</p>
+  <div class="section-label">EJC District Lab · The Program</div>
+  <h2 class="section-title">What the Lab<br><em>actually does.</em></h2>
+  <p class="section-sub">A residential, board-facing executive program for K-12 district leadership teams. Cohorts arrive together, build operating infrastructure on their own documents, and leave with something that works — not notes from a conference.</p>
 
-  <div class="control-bar">
-    <div class="search-wrap">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input class="search-input" id="revSearch" placeholder="Search revenue streams…" autocomplete="off">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:48px">
+    <div class="finding-card">
+      <div style="font-family:var(--fb);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;font-weight:700">Founding Class · Fall 2026</div>
+      <div style="font-family:var(--fb);font-weight:700;font-size:19px;color:var(--white);margin-bottom:10px;line-height:1.3">The inaugural cohort</div>
+      <div style="font-size:14.5px;color:var(--warm);line-height:1.7">Boards and superintendent teams enroll together. Quarterly residential intensives across the program year. Cross-district peer learning under NDA.</div>
     </div>
-    <div class="filter-pills" id="revFilters">
-      <button class="pill active" data-filter="all">All Streams</button>
-      <button class="pill" data-filter="presence">Tier 1 — Presence</button>
-      <button class="pill" data-filter="relationship">Tier 2 — Relationship</button>
-      <button class="pill" data-filter="ip">Tier 3 — IP</button>
-      <button class="pill" data-filter="scale">Tier 4 — Scale</button>
+    <div class="finding-card">
+      <div style="font-family:var(--fb);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;font-weight:700">Governance Lab</div>
+      <div style="font-family:var(--fb);font-weight:700;font-size:19px;color:var(--white);margin-bottom:10px;line-height:1.3">Board literacy that becomes specific</div>
+      <div style="font-size:14.5px;color:var(--warm);line-height:1.7">Built for school boards. Five-data-point visibility framework. The exchange between board and superintendent becomes operational, not ceremonial.</div>
+    </div>
+    <div class="finding-card">
+      <div style="font-family:var(--fb);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;font-weight:700">Operating System Builds</div>
+      <div style="font-family:var(--fb);font-weight:700;font-size:19px;color:var(--white);margin-bottom:10px;line-height:1.3">Built on your documents</div>
+      <div style="font-size:14.5px;color:var(--warm);line-height:1.7">Between sessions, faculty work with each district team to convert their own materials into functional operating infrastructure. The result is portable and theirs.</div>
     </div>
   </div>
-  <div class="result-count" id="revCount"></div>
 
-  <div style="overflow-x:auto;border-radius:var(--rmd);border:1px solid rgba(0,152,154,.1)">
-    <table class="rev-table" id="revTable">
-      <thead>
-        <tr>
-          <th data-col="stream" style="cursor:pointer">Revenue Stream <span class="sort-icon"></span></th>
-          <th data-col="tier" style="cursor:pointer">Tier <span class="sort-icon"></span></th>
-          <th data-col="y1" style="cursor:pointer">Year 1 <span class="sort-icon"></span></th>
-          <th data-col="y2" style="cursor:pointer">Year 2 <span class="sort-icon"></span></th>
-          <th data-col="y3" style="cursor:pointer">Year 3 <span class="sort-icon"></span></th>
-        </tr>
-      </thead>
-      <tbody id="revBody"></tbody>
-    </table>
-  </div>
-
-  <div style="margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px" class="reveal">
-    <div style="background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.15);border-radius:var(--rmd) 0 0 var(--rmd);padding:30px">
-      <div style="font-family:var(--fd);font-size:44px;color:var(--teal);margin-bottom:8px">Year 1</div>
-      <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$640K–$1.25M</div>
-      <div style="font-size:13px;color:var(--fog);line-height:1.6">Rotating venues · Founding Class · 2 cohorts + intensives · Governance Lab</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px" class="reveal">
+    <div style="background:rgba(0,152,154,.06);border:1px solid rgba(0,152,154,.15);border-radius:var(--rmd) 0 0 var(--rmd);padding:32px 28px">
+      <div style="font-family:var(--fd);font-size:42px;color:var(--teal);margin-bottom:10px;line-height:1">Year 1</div>
+      <div style="font-family:var(--fb);font-weight:700;font-size:18px;color:var(--white);margin-bottom:12px;line-height:1.3">Founding Class</div>
+      <div style="font-size:14.5px;color:var(--warm);line-height:1.7">Rotating venues · Two cohorts plus intensives · Governance Lab pilot</div>
     </div>
-    <div style="background:rgba(0,152,154,.08);border:1px solid rgba(0,152,154,.2);padding:30px">
-      <div style="font-family:var(--fd);font-size:44px;color:var(--teal);margin-bottom:8px">Year 2</div>
-      <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$1.38M–$2.60M</div>
-      <div style="font-size:13px;color:var(--fog);line-height:1.6">Pilot venue · 3 cohorts · 5 licensed partners · Annual convening launched · Governance Lab at scale</div>
+    <div style="background:rgba(0,152,154,.08);border:1px solid rgba(0,152,154,.2);padding:32px 28px">
+      <div style="font-family:var(--fd);font-size:42px;color:var(--teal);margin-bottom:10px;line-height:1">Year 2</div>
+      <div style="font-family:var(--fb);font-weight:700;font-size:18px;color:var(--white);margin-bottom:12px;line-height:1.3">Pilot venue + scale</div>
+      <div style="font-size:14.5px;color:var(--warm);line-height:1.7">Three cohorts · Licensing partners · Annual convening launched · Governance Lab at scale</div>
     </div>
-    <div style="background:rgba(0,152,154,.12);border:1px solid rgba(0,152,154,.3);border-radius:0 var(--rmd) var(--rmd) 0;padding:30px">
-      <div style="font-family:var(--fd);font-size:44px;color:var(--teal);margin-bottom:8px">Year 3</div>
-      <div style="font-family:var(--fd);font-size:26px;color:var(--white);margin-bottom:10px">$2.28M–$4.22M</div>
-      <div style="font-size:13px;color:var(--fog);line-height:1.6">Permanent campus · 4 cohorts · 10+ licensed partners · Campus rental · Independent credentialing path</div>
+    <div style="background:rgba(0,152,154,.12);border:1px solid rgba(0,152,154,.3);border-radius:0 var(--rmd) var(--rmd) 0;padding:32px 28px">
+      <div style="font-family:var(--fd);font-size:42px;color:var(--teal);margin-bottom:10px;line-height:1">Year 3</div>
+      <div style="font-family:var(--fb);font-weight:700;font-size:18px;color:var(--white);margin-bottom:12px;line-height:1.3">Permanent campus</div>
+      <div style="font-size:14.5px;color:var(--warm);line-height:1.7">Four cohorts · 10+ licensed partners · Independent credentialing path</div>
     </div>
   </div>
 </section>
@@ -538,11 +526,11 @@ footer{background:var(--ink);border-top:1px solid rgba(0,152,154,.12);padding:44
       <div style="grid-column:1/-1">
         <div style="font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:14px">What does your board need most right now?</div>
         <div style="display:grid;gap:12px">
-          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A read on whether our financial picture matches our public story" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A read on whether our financial picture matches our public story</label>
-          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A framework for the 5 data points we should be tracking" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A framework for the 5 data points we should be tracking</label>
-          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A cross-district peer conversation under NDA" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A cross-district peer conversation under NDA</label>
-          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="Help preparing for the next budget vote" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> Help preparing for the next budget vote</label>
-          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="A walkthrough of the Founding Class structure" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> A walkthrough of the Founding Class structure</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="Financial picture clarity" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> Financial picture clarity</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="Board governance reset" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> Board governance reset</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="Cross-district peer learning" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> Cross-district peer learning</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="Pre-budget readiness" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> Pre-budget readiness</label>
+          <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,.88);font-size:14px;line-height:1.5"><input type="checkbox" name="ffNeed" value="Founding Class details" style="margin-top:4px;accent-color:#00989a;width:16px;height:16px"> Founding Class details</label>
         </div>
       </div>
 
@@ -638,19 +626,6 @@ const JUXTA_DATA = [
   { left:{ district:'CFOs withholding data from boards', detail:'Sacramento warned 7 years ago — state oversight agency echoed the exact same findings from 2018. Nothing changed.', tag:'Systemic information failure', tagType:'red' }, right:{ district:'Science of reading: necessary but insufficient', detail:'Reform only works where leadership infrastructure exists to implement it. The curriculum is not the problem. The operating systems are.', tag:'Leadership is the variable.', tagType:'teal' }, theme:'infrastructure' },
   { left:{ district:'Districts cutting blindly — no framework', detail:'Districts making budget cuts without the operating infrastructure to know which cuts protect students and which eliminate bloat', tag:'Wrong cuts. Wrong reasons.', tagType:'red' }, right:{ district:'108 Districts on the Rise', detail:'Same demographics. Same income. Same challenges. Different outcomes. Harvard says: pair them so they can share what they did.', tag:'That is the District Lab class.', tagType:'teal' }, theme:'recovery' },
   { left:{ district:'Boards caught by surprise — repeatedly', detail:'Oshkosh: outgoing board member said the situation questions her faith in district administration\'s financial leadership (FOX 11, April 2026) · Boston: $53M deficit · 300–400 staff cuts proposed for FY27', tag:'Governance breakdown.', tagType:'red' }, right:{ district:'Cross-district peer sharing: Harvard\'s recommendation', detail:'"Facilitating partnerships between districts could yield significant dividends if districts successfully share ideas for improvement." — Harvard Graduate School of Education / Stanford SEDA, May 2026', tag:'EJC builds this. Quarterly. Residential.', tagType:'teal' }, theme:'recovery' },
-];
-
-const REV_DATA = [
-  { stream:'2-Day Intensive', tier:'Presence', tierKey:'presence', y1:'$100K–$140K', y2:'$200K–$280K', y3:'$300K–$420K', y1num:120, y2num:240, y3num:360 },
-  { stream:'Quarterly Residential Class', tier:'Presence', tierKey:'presence', y1:'$216K–$260K', y2:'$432K–$520K', y3:'$648K–$780K', y1num:238, y2num:476, y3num:714 },
-  { stream:'Fellow Track', tier:'Presence', tierKey:'presence', y1:'$36K–$80K', y2:'$72K–$160K', y3:'$120K–$200K', y1num:58, y2num:116, y3num:160 },
-  { stream:'Governance Lab', tier:'Presence', tierKey:'presence', y1:'$153K–$500K', y2:'$255K–$875K', y3:'$408K–$1.25M', y1num:326, y2num:565, y3num:829 },
-  { stream:'Between-Session Coaching', tier:'Relationship', tierKey:'relationship', y1:'$60K–$120K', y2:'$120K–$240K', y3:'$180K–$360K', y1num:90, y2num:180, y3num:270 },
-  { stream:'Operating System Builds', tier:'Relationship', tierKey:'relationship', y1:'$75K–$150K', y2:'$150K–$225K', y3:'$225K–$375K', y1num:112, y2num:187, y3num:300 },
-  { stream:'Framework Products', tier:'IP', tierKey:'ip', y1:'—', y2:'$50K–$100K', y3:'$100K–$150K', y1num:0, y2num:75, y3num:125 },
-  { stream:'Licensed Curriculum', tier:'IP', tierKey:'ip', y1:'—', y2:'$50K–$125K', y3:'$125K–$275K', y1num:0, y2num:87, y3num:200 },
-  { stream:'Annual Convening', tier:'Scale', tierKey:'scale', y1:'—', y2:'$50K–$75K', y3:'$75K–$100K', y1num:0, y2num:62, y3num:87 },
-  { stream:'Campus Facility Rental', tier:'Scale', tierKey:'scale', y1:'—', y2:'—', y3:'$100K–$300K', y1num:0, y2num:0, y3num:200 },
 ];
 
 const HERO_STATS = [
@@ -768,29 +743,6 @@ function renderStatsTable(data) {
       <td class="src">${d.source}</td>
     </tr>`).join('');
 }
-
-function renderRevTable(data) {
-  const body = document.getElementById('revBody');
-  const countEl = document.getElementById('revCount');
-  const totals = data.filter(d=>d.stream!=='TOTAL');
-  countEl.innerHTML = `Showing <span>${totals.length}</span> of ${REV_DATA.length} revenue streams`;
-  body.innerHTML = totals.map(d => `
-    <tr data-tier="${d.tierKey}">
-      <td>${d.stream}</td>
-      <td style="text-align:center;font-family:var(--fm);font-size:12px;color:var(--fog)">${d.tier}</td>
-      <td>${d.y1}</td>
-      <td>${d.y2}</td>
-      <td>${d.y3}</td>
-    </tr>`).join('') + `
-    <tr>
-      <td>TOTAL</td>
-      <td></td>
-      <td>$640K–$1.25M</td>
-      <td>$1.38M–$2.60M</td>
-      <td>$2.28M–$4.22M</td>
-    </tr>`;
-}
-
 
 function renderBars() {
   const mEl = document.getElementById('marketBars');
@@ -921,39 +873,6 @@ document.querySelectorAll('.stats-table th[data-col]').forEach(th => {
   });
 });
 
-// Revenue table — filter + search + sort
-let revFilter='all', revSearch='', revSortCol=null, revSortDir=1;
-
-function revUpdate() {
-  let data = [...REV_DATA];
-  if (revFilter !== 'all') data = data.filter(d => d.tierKey === revFilter);
-  if (revSearch) data = data.filter(d => d.stream.toLowerCase().includes(revSearch) || d.tier.toLowerCase().includes(revSearch));
-  if (revSortCol) {
-    data.sort((a,b) => {
-      if (['y1num','y2num','y3num'].includes(revSortCol)) return (a[revSortCol]-b[revSortCol])*revSortDir;
-      return (a[revSortCol]||'').localeCompare(b[revSortCol]||'')*revSortDir;
-    });
-  }
-  renderRevTable(data);
-}
-
-document.getElementById('revSearch')?.addEventListener('input', e => { revSearch=e.target.value.toLowerCase(); revUpdate(); });
-document.getElementById('revFilters')?.querySelectorAll('.pill').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('#revFilters .pill').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active'); revFilter=btn.dataset.filter; revUpdate();
-  });
-});
-document.querySelectorAll('.rev-table th[data-col]').forEach(th => {
-  th.addEventListener('click', () => {
-    const col = th.dataset.col==='y1'?'y1num':th.dataset.col==='y2'?'y2num':th.dataset.col==='y3'?'y3num':th.dataset.col;
-    if (revSortCol===col) revSortDir*=-1; else {revSortCol=col;revSortDir=1;}
-    document.querySelectorAll('.rev-table th').forEach(t=>t.classList.remove('sorted-asc','sorted-desc'));
-    th.classList.add(revSortDir===1?'sorted-asc':'sorted-desc');
-    revUpdate();
-  });
-});
-
 // ════════════════════════════════════════════════════════════════════════════
 // SCROLL + INTERSECTION OBSERVERS
 // ════════════════════════════════════════════════════════════════════════════
@@ -997,7 +916,6 @@ renderCrisisCards(CRISIS_DATA.slice().sort((a,b)=>b.amountNum-a.amountNum));
 renderFindings(FINDINGS_DATA);
 juxtaUpdate();
 statsUpdate();
-revUpdate();
 renderBars();
 
 // Initial reveal pass
